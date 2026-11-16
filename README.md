@@ -134,6 +134,30 @@ En la pestaña **Actions**, ejecutar *Actualizar licitaciones* a mano con
 
 ---
 
+## Actualizar a mano
+
+Si el cron no está corriendo —por ejemplo si la cuenta dueña del repositorio
+tiene Actions bloqueado— cualquier colaborador puede mantener la página al día
+desde su computador. Toma un minuto y hace exactamente lo mismo que el cron:
+
+```bash
+npm ci
+export TICKET_MERCADO_PUBLICO=...
+npm run actualizar
+git add public/data/ && git commit -m "Licitaciones al día" && git push
+```
+
+Vercel republica solo al detectar el commit. Si además se exportan
+`GMAIL_USUARIO`, `GMAIL_CLAVE_APP` y `CORREO_DESTINO`, con `npm run correo` se
+manda el resumen.
+
+Conviene saber que **los minutos de Actions se le cobran a la cuenta dueña del
+repositorio, no a quien dispara la corrida**. Que otra persona apriete "Run
+workflow" no evita un bloqueo del dueño; para eso habría que mover el
+repositorio a su cuenta.
+
+---
+
 ## Desarrollo local
 
 ```bash
