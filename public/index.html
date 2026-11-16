@@ -24,6 +24,7 @@
         </div>
         <div class="sello">
           <span id="sello">Cargando…</span>
+          <span class="identidad" id="identidad"></span>
           <a class="enlace-login" href="https://www.mercadopublico.cl/Home/Login" target="_blank" rel="noopener">
             Entrar a Mercado Público ↗
           </a>
@@ -32,6 +33,7 @@
     </header>
 
     <main class="contenedor">
+      <p class="aviso oculto" id="aviso" role="status"></p>
       <section class="resumen" id="resumen" aria-label="Resumen"></section>
 
       <div class="barra">
@@ -67,8 +69,8 @@
     <footer class="contenedor pie">
       <p>
         Fuente: API pública de Mercado Público. La lista se actualiza sola una
-        vez al día. Las marcas de favorita, postulada y descartada se guardan en
-        este navegador.
+        vez al día. Las marcas de favorita, postulada y descartada se comparten
+        con el equipo cuando la base de datos está conectada.
       </p>
       <p>
         Es una ayuda de búsqueda, no un reemplazo de Mercado Público: antes de

@@ -8,12 +8,15 @@
 
 const $ = (sel) => document.querySelector(sel);
 const CLAVE = 'trenino.licitaciones.marcas.v1';
+const CLAVE_NOMBRE = 'trenino.licitaciones.nombre';
 
 const MARCAS = { FAV: 'favorita', POST: 'postulada', DESC: 'descartada' };
 
 const estado = {
   datos: null,
-  marcas: {}, // codigo -> 'favorita' | 'postulada' | 'descartada'
+  marcas: {}, // codigo -> { marca, por, cuando }
+  modo: 'local', // 'compartido' cuando la base responde
+  nombre: '',
   vista: 'pendientes',
   texto: '',
   linea: '',
@@ -24,27 +27,90 @@ const estado = {
 
 /* ────────────────────────── persistencia ────────────────────────── */
 
-function cargarMarcas() {
+/** Copia de respaldo en el navegador, por si la base no responde. */
+function leerRespaldo() {
+  try { return JSON.parse(localStorage.getItem(CLAVE) ?? '{}'); } catch { return {}; }
+}
+function guardarRespaldo() {
+  try { localStorage.setItem(CLAVE, JSON.stringify(estado.marcas)); } catch { /* sin espacio */ }
+}
+
+/** Marca de una licitación, o undefined. */
+const marcaDe = (codigo) => estado.marcas[codigo]?.marca;
+
+/**
+ * Carga las marcas. Primero intenta la base compartida; si no está
+ * configurada o falla, usa lo que haya guardado este navegador.
+ */
+async function cargarMarcas() {
+  estado.marcas = leerRespaldo();
   try {
-    estado.marcas = JSON.parse(localStorage.getItem(CLAVE) ?? '{}');
+    const res = await fetch('api/marcas', { cache: 'no-store' });
+    if (!res.ok) throw new Error(String(res.status));
+    const { modo, marcas } = await res.json();
+    // Si la API contesta, su copia manda: es la fuente de verdad, tanto si
+    // está respaldada por la base compartida como por el archivo local de
+    // desarrollo. El modo solo cambia lo que se le muestra al usuario.
+    estado.modo = modo;
+    estado.marcas = marcas ?? {};
+    guardarRespaldo();
   } catch {
-    estado.marcas = {};
+    estado.modo = 'local';
   }
 }
 
-function guardarMarcas() {
+/**
+ * Pone o saca una marca. Son excluyentes entre sí.
+ * Actualiza la pantalla al tiro y después confirma contra la base; si la base
+ * falla, la marca igual queda guardada en este navegador.
+ */
+async function alternarMarca(codigo, marca) {
+  const quitar = marcaDe(codigo) === marca;
+  const registro = quitar
+    ? null
+    : { marca, por: estado.nombre, cuando: new Date().toISOString() };
+
+  if (registro) estado.marcas[codigo] = registro;
+  else delete estado.marcas[codigo];
+  guardarRespaldo();
+  pintarTodo();
+
   try {
-    localStorage.setItem(CLAVE, JSON.stringify(estado.marcas));
+    const res = await fetch('api/marcas', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ codigo, marca: quitar ? null : marca, por: estado.nombre }),
+    });
+    if (!res.ok) throw new Error(String(res.status));
+    const { registro: guardado } = await res.json();
+    if (guardado) estado.marcas[codigo] = guardado;
+    guardarRespaldo();
+    pintarTodo();
   } catch {
-    /* modo privado o sin espacio: la app sigue, solo no recuerda */
+    avisar('No se pudo guardar en la base compartida. Quedó guardado solo en este navegador.');
   }
 }
 
-/** Pone o saca una marca. Son excluyentes entre sí. */
-function alternarMarca(codigo, marca) {
-  if (estado.marcas[codigo] === marca) delete estado.marcas[codigo];
-  else estado.marcas[codigo] = marca;
-  guardarMarcas();
+/** Nombre de quien marca, para que el resto sepa quién hizo qué. */
+function cargarNombre() {
+  estado.nombre = localStorage.getItem(CLAVE_NOMBRE) ?? '';
+}
+function pedirNombre() {
+  const n = prompt('¿Con qué nombre quieres que aparezcan tus marcas?', estado.nombre || '');
+  if (n === null) return;
+  estado.nombre = n.trim().slice(0, 60);
+  localStorage.setItem(CLAVE_NOMBRE, estado.nombre);
+  pintarTodo();
+  pintarIdentidad();
+}
+
+let avisoTimer;
+function avisar(texto) {
+  const a = $('#aviso');
+  a.textContent = texto;
+  a.classList.remove('oculto');
+  clearTimeout(avisoTimer);
+  avisoTimer = setTimeout(() => a.classList.add('oculto'), 6000);
 }
 
 /* ────────────────────────── formato ────────────────────────── */
@@ -81,7 +147,7 @@ function plazo(dias) {
 /* ────────────────────────── selección ────────────────────────── */
 
 function porVista(l) {
-  const m = estado.marcas[l.codigo];
+  const m = marcaDe(l.codigo);
   switch (estado.vista) {
     case 'pendientes': return !m;
     case 'favoritas': return m === MARCAS.FAV;
@@ -110,7 +176,7 @@ function visibles() {
 
 const cuenta = (marca) =>
   estado.datos.licitaciones.filter((l) =>
-    marca === null ? !estado.marcas[l.codigo] : estado.marcas[l.codigo] === marca
+    marca === null ? !marcaDe(l.codigo) : marcaDe(l.codigo) === marca
   ).length;
 
 /* ────────────────────────── pintado ────────────────────────── */
@@ -148,13 +214,42 @@ function pintarSegmentos() {
 }
 
 function marcaBtn(codigo, marca, clase, simbolo, titulo) {
-  const activa = estado.marcas[codigo] === marca;
+  const activa = marcaDe(codigo) === marca;
   return `<button class="marca-btn ${clase}" data-marca="${marca}" aria-pressed="${activa}"
             title="${titulo}" aria-label="${titulo}">${simbolo}</button>`;
 }
 
+/** Aviso sobre el plazo para hacer preguntas al comprador. */
+function chipPreguntas(l) {
+  if (!l.fechaPreguntas) return '';
+  const d = new Date(l.fechaPreguntas);
+  if (Number.isNaN(d.getTime())) return '';
+  const cerrado = d < new Date();
+  const txt = d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short' });
+  return cerrado
+    ? `<span class="chip apagado" title="Ya no se pueden hacer preguntas al comprador">Preguntas cerradas</span>`
+    : `<span class="chip">Preguntas hasta el ${txt}</span>`;
+}
+
+const etiquetaMarca = (m) =>
+  ({ favorita: 'Favorita', postulada: 'Postulada', descartada: 'Descartada' })[m] ?? '';
+
+/** "hace 2 horas", "ayer", "hace 3 días". */
+function hace(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  const min = Math.round((Date.now() - d) / 60000);
+  if (min < 1) return 'recién';
+  if (min < 60) return `hace ${min} min`;
+  const h = Math.round(min / 60);
+  if (h < 24) return `hace ${h} h`;
+  const dd = Math.round(h / 24);
+  return dd === 1 ? 'ayer' : `hace ${dd} días`;
+}
+
 function tarjeta(l) {
-  const m = estado.marcas[l.codigo];
+  const reg = estado.marcas[l.codigo];
+  const m = reg?.marca;
   const p = plazo(l.diasParaCierre);
   const abierta = estado.abiertas.has(l.codigo);
   const clases = ['item', m ?? ''].filter(Boolean).join(' ');
@@ -185,7 +280,9 @@ function tarjeta(l) {
           <span class="chip linea ${l.linea}">${l.linea === 'escolar' ? 'Escolar' : 'Corporativo'}</span>
           ${l.tipoDescripcion ? `<span class="chip">${escapar(l.tipo)} · ${escapar(l.tipoDescripcion)}</span>` : ''}
           <span class="chip">${escapar(l.sector)}</span>
+          ${chipPreguntas(l)}
         </div>
+        ${reg ? `<p class="firma">${etiquetaMarca(reg.marca)}${reg.por ? ` por ${escapar(reg.por)}` : ''} · ${hace(reg.cuando)}</p>` : ''}
       </div>
       <div class="plazo ${p.clase}">
         <div class="d">${p.texto}</div>
@@ -300,6 +397,19 @@ function pintarSello() {
     `a las ${d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' })}`;
 }
 
+function pintarIdentidad() {
+  const compartido = estado.modo === 'compartido';
+  const quien = `<button class="como" id="cambiarNombre">${
+    estado.nombre ? escapar(estado.nombre) : 'poner mi nombre'
+  }</button>`;
+  $('#identidad').innerHTML =
+    `<span class="punto ${compartido ? 'ok' : 'solo'}"></span>` +
+    (compartido
+      ? `Marcas compartidas con el equipo · ${quien}`
+      : `Base compartida sin conectar: las marcas quedan en este equipo · ${quien}`);
+  $('#cambiarNombre')?.addEventListener('click', pedirNombre);
+}
+
 function llenarRegiones() {
   const regiones = [...new Set(estado.datos.licitaciones.map((l) => l.region).filter(Boolean))].sort();
   $('#region').insertAdjacentHTML(
@@ -324,7 +434,8 @@ function conectarControles() {
 }
 
 async function iniciar() {
-  cargarMarcas();
+  cargarNombre();
+  await cargarMarcas();
   try {
     const res = await fetch(`data/licitaciones.json?v=${Date.now()}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -337,9 +448,11 @@ async function iniciar() {
     return;
   }
   pintarSello();
+  pintarIdentidad();
   llenarRegiones();
   conectarControles();
   pintarTodo();
+  if (estado.modo === 'compartido' && !estado.nombre) pedirNombre();
 }
 
 iniciar();

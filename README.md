@@ -44,10 +44,21 @@ arriba filtran por ellos:
 Lo que no está marcado vive en **Por revisar**, que es la bandeja de entrada:
 la idea es dejarla vacía.
 
-Las marcas se guardan en el `localStorage` del navegador. Eso significa que
-**son por dispositivo**: si Cristián marca algo en su computador, no aparece
-marcado en otro. Para que fueran compartidas habría que agregar una base de
-datos, que es el siguiente paso natural si el uso lo pide.
+Las marcas son **compartidas**: quedan en una base de datos y cada marca
+guarda quién la puso y cuándo, así que en la tarjeta aparece "Postulada por
+Cristián · hace 2 h". Si la base no está conectada, la página sigue
+funcionando pero las marcas quedan solo en ese navegador, y lo avisa arriba.
+
+### Fechas que muestra cada licitación
+
+| Fecha | Qué es |
+|---|---|
+| **Cierre** | Último momento para entregar la oferta. Es el plazo grande, el que sale en rojo o ámbar |
+| **Preguntas** | Último día para preguntarle algo al comprador. Si ya pasó, sale "Preguntas cerradas": se puede ofertar, pero sin pedir aclaraciones |
+
+Todas las licitaciones que aparecen están **abiertas a postulación** (estado
+"Publicada" en Mercado Público). Las adjudicadas, desiertas o revocadas no
+entran.
 
 ### Cómo postular
 
@@ -98,13 +109,22 @@ En **Settings → Secrets and variables → Actions**:
 | Variable | `CORREO_ORIGEN` | Remitente. Sin dominio propio: `Licitaciones Trenino <onboarding@resend.dev>` |
 | Variable | `SITIO_URL` | URL del sitio en Vercel, para el botón del correo |
 
-### 2. Vercel
+### 2. Base de datos de las marcas
+
+En el proyecto de Vercel: **Storage → Create Database → Upstash for Redis**
+(plan gratis). Al conectarla al proyecto, Vercel inyecta solas las variables
+`KV_REST_API_URL` y `KV_REST_API_TOKEN`, que es lo único que necesita
+`lib/almacen.mjs`. No hay que instalar ningún paquete.
+
+Sin esa base el sitio funciona igual, solo que las marcas no se comparten.
+
+### 3. Vercel
 
 Importar el repositorio y dejar la configuración por defecto: `vercel.json` ya
 indica que el sitio es estático y que la carpeta a publicar es `public/`.
 Cada commit del workflow dispara una republicación automática.
 
-### 3. Primera corrida
+### 4. Primera corrida
 
 En la pestaña **Actions**, ejecutar *Actualizar licitaciones* a mano con
 **Run workflow**. Después corre solo todos los días a las 08:00 de Chile.
@@ -132,6 +152,8 @@ No hay dependencias que instalar: todo usa Node 20+ y `fetch` nativo.
 |---|---|
 | `lib/filtros.mjs` | Las reglas de clasificación. **Es el archivo a editar** si cambian los criterios |
 | `lib/api.mjs` | Cliente de la API, con reintentos ante 429 y límite de 3 llamadas en paralelo |
+| `lib/almacen.mjs` | Las marcas compartidas. Usa Upstash Redis; sin base, cae a un archivo local |
+| `api/marcas.js` | Función serverless que lee y escribe las marcas |
 | `scripts/actualizar.mjs` | El proceso diario: consulta, filtra, guarda |
 | `scripts/enviar-correo.mjs` | Resumen por Resend; no envía nada si no hay novedades |
 | `scripts/servidor.mjs` | Servidor estático para desarrollo |
@@ -149,5 +171,8 @@ No hay dependencias que instalar: todo usa Node 20+ y `fetch` nativo.
 - **El campo `vistaPrimeraVez`** guarda cuándo se vio por primera vez cada
   licitación; de ahí sale la marca "Nueva" y el contenido del correo.
 - **El correo no se manda si no hay novedades**, para que no se vuelva ruido.
+- **`VERSION_ESQUEMA` en `actualizar.mjs`**: al agregar campos al registro hay
+  que subir ese número, si no el script reusa los registros viejos sin el
+  campo nuevo y queda a medias.
 - Es una ayuda de búsqueda, no un reemplazo de Mercado Público: antes de
   postular hay que entrar a la ficha oficial y leer las bases.

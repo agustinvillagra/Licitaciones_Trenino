@@ -206,3 +206,24 @@ input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible
   .plazo .f { margin-top: 0; }
   h1 { font-size: 22px; }
 }
+
+/* ───────────────── identidad y avisos ───────────────── */
+.identidad { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--gris-60); }
+.punto { width: 7px; height: 7px; border-radius: 50%; background: var(--gris-40); flex: none; }
+.punto.ok { background: var(--verde); }
+.punto.solo { background: var(--ambar); }
+.como {
+  appearance: none; border: 0; background: none; padding: 0; cursor: pointer;
+  font: inherit; font-size: 12.5px; font-weight: 600; color: var(--negro);
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.aviso {
+  margin: 20px 0 0; padding: 10px 14px; border-radius: 9px; font-size: 13.5px;
+  background: var(--ambar-suave); color: var(--gris-90); border: 1px solid #f0e2c4;
+}
+
+/* firma de quién marcó */
+.firma { margin: 9px 0 0; font-size: 12.5px; color: var(--gris-60); }
+
+/* chip apagado: plazo de preguntas vencido */
+.chip.apagado { color: var(--gris-40); background: var(--gris-10); border-color: transparent; }

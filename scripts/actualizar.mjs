@@ -20,6 +20,11 @@ const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ARCHIVO = resolve(RAIZ, 'public/data/licitaciones.json');
 const HILOS = 3; // más que esto y la API devuelve 429
 
+// Subir este número cuando se agreguen campos al registro: obliga a volver a
+// bajar el detalle de todas, en vez de reusar los registros viejos sin el
+// campo nuevo.
+const VERSION_ESQUEMA = 2;
+
 /** Corre fn sobre cada elemento con como máximo `limite` en vuelo. */
 async function enParalelo(elementos, limite, fn) {
   const resultados = [];
@@ -68,6 +73,10 @@ function construir(base, det, hoy) {
     descripcion: (det?.Descripcion ?? '').slice(0, 600),
     fechaPublicacion: (det?.Fechas?.FechaPublicacion ?? '').slice(0, 10),
     fechaCierre: base.FechaCierre ?? det?.Fechas?.FechaCierre ?? null,
+    // Último momento para hacerle preguntas al comprador. Si ya pasó, se
+    // oferta sin poder pedir aclaraciones: conviene verlo antes de decidir.
+    fechaPreguntas: det?.Fechas?.FechaFinal ?? null,
+    fechaApertura: det?.Fechas?.FechaActoAperturaTecnica ?? null,
     montoEstimado: det?.MontoEstimado ?? null,
     moneda: det?.Moneda ?? 'CLP',
     items,
@@ -81,7 +90,13 @@ async function main() {
   const hoy = new Date().toISOString().slice(0, 10);
 
   const previo = await leerPrevio();
-  const conocidas = new Map((previo.licitaciones ?? []).map((l) => [l.codigo, l]));
+  const mismoEsquema = previo.versionEsquema === VERSION_ESQUEMA;
+  if (!mismoEsquema && previo.licitaciones?.length) {
+    console.log('El esquema cambió: se vuelve a bajar el detalle de todas.');
+  }
+  const conocidas = new Map(
+    mismoEsquema ? (previo.licitaciones ?? []).map((l) => [l.codigo, l]) : []
+  );
 
   console.log('Consultando licitaciones activas…');
   const activas = await licitacionesActivas();
@@ -124,6 +139,7 @@ async function main() {
 
   const salida = {
     actualizado: ahora.toISOString(),
+    versionEsquema: VERSION_ESQUEMA,
     totalActivasChileCompra: activas.length,
     resumen: {
       escolar: registros.filter((r) => r.linea === 'escolar').length,
