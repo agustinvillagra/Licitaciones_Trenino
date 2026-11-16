@@ -148,6 +148,22 @@ async function main() {
   });
 
   const cuerpo = await res.json().catch(() => ({}));
+
+  // Resend, mientras no haya un dominio verificado, solo deja enviar al correo
+  // del dueño de la cuenta. No es un error del código: es la cuenta que falta
+  // configurar, y no tiene sentido que haga fallar la actualización diaria.
+  if (res.status === 403 && cuerpo?.name === 'validation_error') {
+    console.warn(
+      '\nResend rechazó el envío porque la cuenta todavía no tiene un dominio verificado.\n' +
+        `  ${cuerpo.message}\n` +
+        '  Para desbloquearlo: verificar trenino.cl en resend.com/domains y poner\n' +
+        '  CORREO_ORIGEN con una dirección de ese dominio. Mientras tanto, dejar\n' +
+        '  CORREO_DESTINO con el correo dueño de la cuenta.\n' +
+        '  La página sí quedó actualizada; solo no salió el correo.'
+    );
+    return;
+  }
+
   if (!res.ok) throw new Error(`Resend respondió ${res.status}: ${JSON.stringify(cuerpo)}`);
   console.log(`Correo enviado a ${destino.join(', ')} — ${nuevas.length} nuevas (id ${cuerpo.id ?? '?'})`);
 }
