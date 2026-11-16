@@ -1,74 +1,106 @@
 /**
- * Página de licitaciones. Lee data/licitaciones.json, que genera el script
- * scripts/actualizar.mjs una vez al día desde GitHub Actions.
+ * Página de licitaciones.
+ *
+ * Lee public/data/licitaciones.json, que genera scripts/actualizar.mjs una vez
+ * al día. Las marcas del usuario (favorita, postulada, descartada) se guardan
+ * en localStorage: viven en el navegador de quien las puso.
  */
 
 const $ = (sel) => document.querySelector(sel);
+const CLAVE = 'trenino.licitaciones.marcas.v1';
+
+const MARCAS = { FAV: 'favorita', POST: 'postulada', DESC: 'descartada' };
 
 const estado = {
   datos: null,
-  linea: 'todas',
+  marcas: {}, // codigo -> 'favorita' | 'postulada' | 'descartada'
+  vista: 'pendientes',
   texto: '',
+  linea: '',
   region: '',
   orden: 'cierre',
-  soloNuevas: false,
   abiertas: new Set(),
 };
 
+/* ────────────────────────── persistencia ────────────────────────── */
+
+function cargarMarcas() {
+  try {
+    estado.marcas = JSON.parse(localStorage.getItem(CLAVE) ?? '{}');
+  } catch {
+    estado.marcas = {};
+  }
+}
+
+function guardarMarcas() {
+  try {
+    localStorage.setItem(CLAVE, JSON.stringify(estado.marcas));
+  } catch {
+    /* modo privado o sin espacio: la app sigue, solo no recuerda */
+  }
+}
+
+/** Pone o saca una marca. Son excluyentes entre sí. */
+function alternarMarca(codigo, marca) {
+  if (estado.marcas[codigo] === marca) delete estado.marcas[codigo];
+  else estado.marcas[codigo] = marca;
+  guardarMarcas();
+}
+
+/* ────────────────────────── formato ────────────────────────── */
+
 const pesos = new Intl.NumberFormat('es-CL', {
-  style: 'currency',
-  currency: 'CLP',
-  maximumFractionDigits: 0,
+  style: 'currency', currency: 'CLP', maximumFractionDigits: 0,
 });
-
-function fechaLarga(iso) {
-  if (!iso) return '—';
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return '—';
-  return d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short', year: 'numeric' });
-}
-
-function horaCierre(iso) {
-  if (!iso) return '';
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return '';
-  return d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
-}
-
-function urgencia(dias) {
-  if (dias === null) return '';
-  if (dias <= 2) return 'urgente';
-  if (dias <= 7) return 'pronto';
-  return 'holgado';
-}
-
-function textoDias(dias) {
-  if (dias === null) return '—';
-  if (dias < 0) return 'cerrada';
-  if (dias === 0) return 'hoy';
-  if (dias === 1) return '1 día';
-  return `${dias} días`;
-}
 
 const escapar = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]
   );
 
-/* ---------------------------------------------------------- filtrado */
+function fechaHora(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '—';
+  return (
+    d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short' }) +
+    ', ' +
+    d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' })
+  );
+}
+
+function plazo(dias) {
+  if (dias === null || dias === undefined) return { texto: '—', clase: '' };
+  if (dias < 0) return { texto: 'cerrada', clase: '' };
+  if (dias === 0) return { texto: 'cierra hoy', clase: 'urge' };
+  if (dias === 1) return { texto: 'queda 1 día', clase: 'urge' };
+  if (dias <= 2) return { texto: `quedan ${dias} días`, clase: 'urge' };
+  if (dias <= 7) return { texto: `quedan ${dias} días`, clase: 'semana' };
+  return { texto: `quedan ${dias} días`, clase: '' };
+}
+
+/* ────────────────────────── selección ────────────────────────── */
+
+function porVista(l) {
+  const m = estado.marcas[l.codigo];
+  switch (estado.vista) {
+    case 'pendientes': return !m;
+    case 'favoritas': return m === MARCAS.FAV;
+    case 'postuladas': return m === MARCAS.POST;
+    case 'descartadas': return m === MARCAS.DESC;
+    default: return true;
+  }
+}
 
 function visibles() {
   const t = estado.texto.trim().toLowerCase();
   return estado.datos.licitaciones
-    .filter((l) => estado.linea === 'todas' || l.linea === estado.linea)
+    .filter(porVista)
+    .filter((l) => !estado.linea || l.linea === estado.linea)
     .filter((l) => !estado.region || l.region === estado.region)
-    .filter((l) => !estado.soloNuevas || l.nueva)
-    .filter((l) => {
-      if (!t) return true;
-      return `${l.nombre} ${l.organismo} ${l.comuna} ${l.region} ${l.codigo}`
-        .toLowerCase()
-        .includes(t);
-    })
+    .filter((l) =>
+      !t ||
+      `${l.nombre} ${l.organismo} ${l.comuna} ${l.region} ${l.codigo}`.toLowerCase().includes(t)
+    )
     .sort((a, b) => {
       if (estado.orden === 'nuevas' && a.nueva !== b.nueva) return a.nueva ? -1 : 1;
       if (estado.orden === 'monto') return (b.montoEstimado ?? 0) - (a.montoEstimado ?? 0);
@@ -76,115 +108,196 @@ function visibles() {
     });
 }
 
-/* ---------------------------------------------------------- pintado */
+const cuenta = (marca) =>
+  estado.datos.licitaciones.filter((l) =>
+    marca === null ? !estado.marcas[l.codigo] : estado.marcas[l.codigo] === marca
+  ).length;
 
-function pintarTarjetas() {
+/* ────────────────────────── pintado ────────────────────────── */
+
+function pintarResumen() {
   const { resumen, totalActivasChileCompra } = estado.datos;
-  const tarjetas = [
-    { n: resumen.escolar, e: 'uniforme escolar', destacada: false },
-    { n: resumen.corporativo, e: 'vestuario corporativo', destacada: false },
-    { n: resumen.nuevasHoy, e: 'nuevas hoy', destacada: resumen.nuevasHoy > 0 },
-    { n: totalActivasChileCompra.toLocaleString('es-CL'), e: 'revisadas en ChileCompra', destacada: false },
+  const celdas = [
+    { n: resumen.escolar, e: 'uniforme escolar' },
+    { n: resumen.corporativo, e: 'vestuario corporativo' },
+    { n: resumen.nuevasHoy, e: 'nuevas hoy', acento: resumen.nuevasHoy > 0 },
+    { n: cuenta(MARCAS.POST), e: 'postuladas' },
+    { n: totalActivasChileCompra.toLocaleString('es-CL'), e: 'revisadas en ChileCompra' },
   ];
-  $('#tarjetas').innerHTML = tarjetas
-    .map(
-      (t) =>
-        `<div class="tarjeta${t.destacada ? ' destacada' : ''}">
-           <div class="n">${t.n}</div><div class="e">${t.e}</div>
-         </div>`
-    )
+  $('#resumen').innerHTML = celdas
+    .map((c) => `<div class="celda${c.acento ? ' acento' : ''}"><div class="n">${c.n}</div><div class="e">${c.e}</div></div>`)
     .join('');
 }
 
-function filaItem(l) {
-  const u = urgencia(l.diasParaCierre);
+function pintarSegmentos() {
+  const n = {
+    pendientes: cuenta(null),
+    favoritas: cuenta(MARCAS.FAV),
+    postuladas: cuenta(MARCAS.POST),
+    descartadas: cuenta(MARCAS.DESC),
+    todas: estado.datos.licitaciones.length,
+  };
+  const nombres = {
+    pendientes: 'Por revisar', favoritas: 'Favoritas', postuladas: 'Postuladas',
+    descartadas: 'Descartadas', todas: 'Todas',
+  };
+  for (const b of document.querySelectorAll('.seg')) {
+    const v = b.dataset.vista;
+    b.innerHTML = `${nombres[v]}<span class="pill">${n[v]}</span>`;
+  }
+}
+
+function marcaBtn(codigo, marca, clase, simbolo, titulo) {
+  const activa = estado.marcas[codigo] === marca;
+  return `<button class="marca-btn ${clase}" data-marca="${marca}" aria-pressed="${activa}"
+            title="${titulo}" aria-label="${titulo}">${simbolo}</button>`;
+}
+
+function tarjeta(l) {
+  const m = estado.marcas[l.codigo];
+  const p = plazo(l.diasParaCierre);
   const abierta = estado.abiertas.has(l.codigo);
+  const clases = ['item', m ?? ''].filter(Boolean).join(' ');
+
   const items = l.items.length
     ? `<h4>Qué piden</h4>
        <ul class="items">
-         ${l.items
-           .slice(0, 12)
-           .map(
-             (it) =>
-               `<li><strong>${escapar(it.producto)}</strong>
-                ${it.cantidad ? `<span class="cant">· ${it.cantidad} ${escapar(it.unidad)}</span>` : ''}
-                ${it.descripcion ? `<br><span class="cant">${escapar(it.descripcion)}</span>` : ''}</li>`
-           )
-           .join('')}
+         ${l.items.slice(0, 10).map((it) => `
+           <li><strong>${escapar(it.producto)}</strong>
+             ${it.cantidad ? `<span class="q"> · ${it.cantidad} ${escapar(it.unidad)}</span>` : ''}
+             ${it.descripcion ? `<span class="dd">${escapar(it.descripcion)}</span>` : ''}
+           </li>`).join('')}
        </ul>
-       ${l.items.length > 12 ? `<p class="cant">y ${l.items.length - 12} ítems más en la ficha.</p>` : ''}`
+       ${l.items.length > 10 ? `<p class="q">y ${l.items.length - 10} ítems más en la ficha.</p>` : ''}`
     : '';
 
   return `
-  <article class="item${l.nueva ? ' nueva' : ''}" data-codigo="${escapar(l.codigo)}">
-    <div class="item-cab" role="button" tabindex="0">
-      <div>
+  <article class="${clases}" data-codigo="${escapar(l.codigo)}">
+    <div class="fila">
+      <div class="cuerpo" role="button" tabindex="0" aria-expanded="${abierta}">
         <p class="titulo">${escapar(l.nombre)}</p>
-        <div class="meta">
-          <span>${escapar(l.organismo)}</span>
-          <span class="sep">·</span>
-          <span>${escapar(l.comuna || l.region)}</span>
-          ${l.montoEstimado ? `<span class="sep">·</span><span>${pesos.format(l.montoEstimado)} estimado</span>` : ''}
-        </div>
-        <div class="etiquetas">
-          ${l.nueva ? '<span class="etiqueta nueva">Nueva</span>' : ''}
-          <span class="etiqueta ${l.linea}">${l.linea === 'escolar' ? 'Uniforme escolar' : 'Corporativo'}</span>
-          ${l.tipoDescripcion ? `<span class="etiqueta">${escapar(l.tipo)} · ${escapar(l.tipoDescripcion)}</span>` : ''}
-          <span class="etiqueta">${escapar(l.sector)}</span>
+        <p class="meta">
+          <b>${escapar(l.organismo)}</b> · ${escapar(l.comuna || l.region)}
+          ${l.montoEstimado ? ` · ${pesos.format(l.montoEstimado)} estimado` : ''}
+        </p>
+        <div class="chips">
+          ${l.nueva ? '<span class="chip nueva">Nueva</span>' : ''}
+          <span class="chip linea ${l.linea}">${l.linea === 'escolar' ? 'Escolar' : 'Corporativo'}</span>
+          ${l.tipoDescripcion ? `<span class="chip">${escapar(l.tipo)} · ${escapar(l.tipoDescripcion)}</span>` : ''}
+          <span class="chip">${escapar(l.sector)}</span>
         </div>
       </div>
-      <div class="cierre">
-        <div class="dias ${u}">${textoDias(l.diasParaCierre)}</div>
-        <div class="fecha">${fechaLarga(l.fechaCierre)} ${horaCierre(l.fechaCierre)}</div>
+      <div class="plazo ${p.clase}">
+        <div class="d">${p.texto}</div>
+        <div class="f">${fechaHora(l.fechaCierre)}</div>
+      </div>
+      <div class="marcas">
+        ${marcaBtn(l.codigo, MARCAS.FAV, 'fav', '★', 'Marcar como favorita')}
+        ${marcaBtn(l.codigo, MARCAS.POST, 'post', '✓', 'Marcar como postulada')}
+        ${marcaBtn(l.codigo, MARCAS.DESC, 'desc', '✕', 'Descartar')}
       </div>
     </div>
     <div class="detalle${abierta ? '' : ' oculto'}">
       ${l.descripcion ? `<h4>Descripción</h4><p>${escapar(l.descripcion)}</p>` : ''}
       ${items}
-      <div class="acciones">
-        <a class="boton" href="${escapar(l.enlace)}" target="_blank" rel="noopener">
-          Ver en Mercado Público
+      <h4>Cómo postular</h4>
+      <div class="pasos">
+        <a class="btn" href="https://www.mercadopublico.cl/Home/Login" target="_blank" rel="noopener">
+          1 · Entrar como proveedor
         </a>
-        <span class="codigo">${escapar(l.codigo)}</span>
-        ${l.fechaPublicacion ? `<span class="codigo">publicada ${fechaLarga(l.fechaPublicacion)}</span>` : ''}
+        <a class="btn secundario" href="${escapar(l.enlace)}" target="_blank" rel="noopener">
+          2 · Abrir la ficha y ofertar
+        </a>
+        <button class="cod" data-copiar="${escapar(l.codigo)}" title="Copiar el código">
+          ${escapar(l.codigo)}
+        </button>
       </div>
+      <p class="nota-postular">
+        Mercado Público no permite enlazar directo al formulario de oferta. Hay
+        que <b>iniciar sesión primero</b>; con la sesión abierta, el botón
+        <b>Ofertar</b> aparece dentro de la misma ficha. Si no aparece, revisa
+        que la empresa esté inscrita en el Registro de Proveedores.
+      </p>
     </div>
   </article>`;
 }
 
-function pintar() {
+function pintarLista() {
   const lista = visibles();
-  $('#lista').innerHTML = lista.map(filaItem).join('');
-  $('#vacio').classList.toggle('oculto', lista.length > 0);
-  const nuevas = lista.filter((l) => l.nueva).length;
-  $('#conteo').textContent =
-    lista.length === 0
-      ? ''
-      : `${lista.length} licitación${lista.length === 1 ? '' : 'es'} abierta${lista.length === 1 ? '' : 's'}` +
-        (nuevas ? ` · ${nuevas} nueva${nuevas === 1 ? '' : 's'}` : '');
+  $('#lista').innerHTML = lista.map(tarjeta).join('');
 
-  for (const cab of document.querySelectorAll('.item-cab')) {
-    const alternar = () => {
-      const codigo = cab.closest('.item').dataset.codigo;
-      const det = cab.nextElementSibling;
+  const vacio = $('#vacio');
+  vacio.classList.toggle('oculto', lista.length > 0);
+  if (!lista.length) {
+    vacio.textContent =
+      estado.vista === 'pendientes'
+        ? 'No queda nada por revisar. Buen trabajo.'
+        : 'No hay licitaciones que calcen con este filtro.';
+  }
+
+  const nuevas = lista.filter((l) => l.nueva).length;
+  $('#conteo').textContent = lista.length
+    ? `${lista.length} licitación${lista.length === 1 ? '' : 'es'}` +
+      (nuevas ? ` · ${nuevas} nueva${nuevas === 1 ? '' : 's'}` : '')
+    : '';
+
+  conectarTarjetas();
+}
+
+function conectarTarjetas() {
+  for (const cuerpo of document.querySelectorAll('.cuerpo')) {
+    const abrir = () => {
+      const art = cuerpo.closest('.item');
+      const det = art.querySelector('.detalle');
       det.classList.toggle('oculto');
-      if (det.classList.contains('oculto')) estado.abiertas.delete(codigo);
-      else estado.abiertas.add(codigo);
+      const visible = !det.classList.contains('oculto');
+      cuerpo.setAttribute('aria-expanded', String(visible));
+      if (visible) estado.abiertas.add(art.dataset.codigo);
+      else estado.abiertas.delete(art.dataset.codigo);
     };
-    cab.addEventListener('click', alternar);
-    cab.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); alternar(); }
+    cuerpo.addEventListener('click', abrir);
+    cuerpo.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(); }
+    });
+  }
+
+  for (const btn of document.querySelectorAll('.marca-btn')) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const codigo = btn.closest('.item').dataset.codigo;
+      alternarMarca(codigo, btn.dataset.marca);
+      pintarTodo();
+    });
+  }
+
+  for (const btn of document.querySelectorAll('[data-copiar]')) {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const original = btn.textContent;
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copiar);
+        btn.textContent = 'copiado ✓';
+      } catch {
+        btn.textContent = 'no se pudo copiar';
+      }
+      setTimeout(() => { btn.textContent = original; }, 1400);
     });
   }
 }
 
-/* ---------------------------------------------------------- arranque */
+function pintarTodo() {
+  pintarResumen();
+  pintarSegmentos();
+  pintarLista();
+}
+
+/* ────────────────────────── arranque ────────────────────────── */
 
 function pintarSello() {
   const d = new Date(estado.datos.actualizado);
-  $('#sello').innerHTML =
-    `Actualizado el ${d.toLocaleDateString('es-CL', { day: '2-digit', month: 'long' })}` +
-    ` a las ${d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' })}`;
+  $('#sello').textContent =
+    `Actualizado el ${d.toLocaleDateString('es-CL', { day: '2-digit', month: 'long' })} ` +
+    `a las ${d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' })}`;
 }
 
 function llenarRegiones() {
@@ -196,21 +309,22 @@ function llenarRegiones() {
 }
 
 function conectarControles() {
-  for (const b of document.querySelectorAll('.pestana')) {
+  for (const b of document.querySelectorAll('.seg')) {
     b.addEventListener('click', () => {
-      document.querySelector('.pestana.activa').classList.remove('activa');
+      document.querySelector('.seg.activa')?.classList.remove('activa');
       b.classList.add('activa');
-      estado.linea = b.dataset.linea;
-      pintar();
+      estado.vista = b.dataset.vista;
+      pintarLista();
     });
   }
-  $('#busqueda').addEventListener('input', (e) => { estado.texto = e.target.value; pintar(); });
-  $('#region').addEventListener('change', (e) => { estado.region = e.target.value; pintar(); });
-  $('#orden').addEventListener('change', (e) => { estado.orden = e.target.value; pintar(); });
-  $('#soloNuevas').addEventListener('change', (e) => { estado.soloNuevas = e.target.checked; pintar(); });
+  $('#busqueda').addEventListener('input', (e) => { estado.texto = e.target.value; pintarLista(); });
+  $('#linea').addEventListener('change', (e) => { estado.linea = e.target.value; pintarLista(); });
+  $('#region').addEventListener('change', (e) => { estado.region = e.target.value; pintarLista(); });
+  $('#orden').addEventListener('change', (e) => { estado.orden = e.target.value; pintarLista(); });
 }
 
 async function iniciar() {
+  cargarMarcas();
   try {
     const res = await fetch(`data/licitaciones.json?v=${Date.now()}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -218,15 +332,14 @@ async function iniciar() {
   } catch (e) {
     $('#sello').textContent = 'No se pudo cargar';
     $('#lista').innerHTML =
-      `<p class="vacio">No se pudo leer la lista de licitaciones (${escapar(e.message)}).<br>
+      `<p class="vacio">No se pudo leer la lista (${escapar(e.message)}).<br>
        Si acabas de publicar el sitio, espera a que corra la primera actualización.</p>`;
     return;
   }
   pintarSello();
-  pintarTarjetas();
   llenarRegiones();
   conectarControles();
-  pintar();
+  pintarTodo();
 }
 
 iniciar();

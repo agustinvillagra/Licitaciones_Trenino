@@ -30,6 +30,34 @@ repositorio. Nunca están en el código ni llegan al navegador.
 
 ---
 
+## Qué se puede hacer en la página
+
+Cada licitación se puede marcar con uno de tres estados, y las pestañas de
+arriba filtran por ellos:
+
+| Marca | Para qué | Dónde queda |
+|---|---|---|
+| ★ Favorita | Vale la pena, hay que mirarla con calma | Pestaña *Favoritas* |
+| ✓ Postulada | Ya se presentó oferta | Pestaña *Postuladas* |
+| ✕ Descartada | No sirve, sacarla de la vista | Pestaña *Descartadas* |
+
+Lo que no está marcado vive en **Por revisar**, que es la bandeja de entrada:
+la idea es dejarla vacía.
+
+Las marcas se guardan en el `localStorage` del navegador. Eso significa que
+**son por dispositivo**: si Cristián marca algo en su computador, no aparece
+marcado en otro. Para que fueran compartidas habría que agregar una base de
+datos, que es el siguiente paso natural si el uso lo pide.
+
+### Cómo postular
+
+Mercado Público no permite enlazar directo al formulario de oferta. El panel
+de cada licitación muestra los dos pasos: entrar como proveedor y después
+abrir la ficha, donde recién aparece el botón **Ofertar**. También hay un
+botón para copiar el código de la licitación.
+
+---
+
 ## Los filtros
 
 Están todos en [`lib/filtros.mjs`](lib/filtros.mjs), comentados. En resumen:
@@ -108,6 +136,7 @@ No hay dependencias que instalar: todo usa Node 20+ y `fetch` nativo.
 | `scripts/enviar-correo.mjs` | Resumen por Resend; no envía nada si no hay novedades |
 | `scripts/servidor.mjs` | Servidor estático para desarrollo |
 | `public/` | La página: `index.html`, `app.js`, `styles.css` y el JSON de datos |
+| `public/app.js` | Render, filtros y las marcas en `localStorage` |
 | `.github/workflows/actualizar.yml` | El cron diario |
 
 ---
