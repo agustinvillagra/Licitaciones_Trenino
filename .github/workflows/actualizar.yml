@@ -1,0 +1,51 @@
+name: Actualizar licitaciones
+
+on:
+  schedule:
+    # 11:00 UTC = 08:00 en Chile continental (horario de verano).
+    # GitHub puede atrasar el disparo unos minutos; no es crítico.
+    - cron: '0 11 * * *'
+  workflow_dispatch: # permite correrlo a mano desde la pestaña Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-licitaciones
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Consultar Mercado Público y actualizar el JSON
+        env:
+          TICKET_MERCADO_PUBLICO: ${{ secrets.TICKET_MERCADO_PUBLICO }}
+        run: node scripts/actualizar.mjs
+
+      - name: Enviar el resumen por correo
+        if: success()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          CORREO_DESTINO: ${{ secrets.CORREO_DESTINO }}
+          CORREO_ORIGEN: ${{ vars.CORREO_ORIGEN }}
+          SITIO_URL: ${{ vars.SITIO_URL }}
+        run: node scripts/enviar-correo.mjs
+
+      - name: Guardar los cambios
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- public/data/licitaciones.json; then
+            echo "Sin cambios en los datos."
+          else
+            git add public/data/licitaciones.json
+            git commit -m "Licitaciones al $(date -u +%Y-%m-%d)"
+            git push
+          fi
