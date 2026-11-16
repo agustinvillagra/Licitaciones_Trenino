@@ -28,11 +28,38 @@ import nodemailer from 'nodemailer';
 const RAIZ = resolve(import.meta.dirname, '..');
 const porGmail = () => Boolean(process.env.GMAIL_USUARIO && process.env.GMAIL_CLAVE_APP);
 
-const ORIGEN =
-  process.env.CORREO_ORIGEN ||
-  (porGmail()
-    ? `Licitaciones Trenino <${process.env.GMAIL_USUARIO}>`
-    : 'Licitaciones Trenino <onboarding@resend.dev>');
+/**
+ * El remitente.
+ *
+ * Gmail solo acepta enviar desde la cuenta autenticada: si el From apunta a
+ * otra dirección responde 553 y el mensaje no sale. Por eso, cuando se envía
+ * por Gmail se respeta el nombre que venga en CORREO_ORIGEN pero la dirección
+ * se fuerza a GMAIL_USUARIO. Así un CORREO_ORIGEN heredado de la época de
+ * Resend no rompe el envío.
+ */
+function remitente() {
+  const configurado = process.env.CORREO_ORIGEN?.trim();
+
+  if (!porGmail()) return configurado || 'Licitaciones Trenino <onboarding@resend.dev>';
+
+  const cuenta = process.env.GMAIL_USUARIO;
+  if (!configurado) return `Licitaciones Trenino <${cuenta}>`;
+
+  // Separa "Nombre <direccion>" para quedarse solo con el nombre.
+  const conNombre = configurado.match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
+  const nombre = (conNombre ? conNombre[1] : '').replace(/^"|"$/g, '').trim();
+  const direccion = conNombre ? conNombre[2].trim() : configurado;
+
+  if (direccion.toLowerCase() === cuenta.toLowerCase()) return configurado;
+
+  console.log(
+    `CORREO_ORIGEN apunta a ${direccion}, pero Gmail solo envía desde ` +
+      `${cuenta}: se usa esa dirección.`
+  );
+  return `${nombre || 'Licitaciones Trenino'} <${cuenta}>`;
+}
+
+const ORIGEN = remitente();
 const SITIO = process.env.SITIO_URL || '';
 
 const pesos = (n) =>
