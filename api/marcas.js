@@ -8,7 +8,7 @@
  * configuración extra. No hay framework.
  */
 
-import { leerMarcas, guardarMarca, modoAlmacen, MARCAS_VALIDAS } from '../lib/almacen.mjs';
+import { leerMarcas, guardarMarca, modoAlmacen, MARCAS_VALIDAS, SinAlmacen } from '../lib/almacen.mjs';
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
@@ -34,6 +34,11 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).json({ error: 'Método no permitido.' });
   } catch (e) {
+    if (e instanceof SinAlmacen) {
+      // No es un fallo del código: falta conectar la base. La página lo
+      // entiende y guarda la marca solo en ese navegador.
+      return res.status(503).json({ error: e.message, modo: 'local' });
+    }
     console.error('Error en /api/marcas:', e);
     return res.status(500).json({ error: e.message });
   }
