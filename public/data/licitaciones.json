@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-11-16T13:35:49.889Z",
-  "versionEsquema": 2,
-  "totalActivasChileCompra": 5341,
+  "actualizado": "2026-11-16T15:33:57.765Z",
+  "versionEsquema": 3,
+  "totalActivasChileCompra": 5454,
   "resumen": {
     "escolar": 7,
     "corporativo": 35,
@@ -521,7 +521,7 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3996-55-L126",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 2,
+      "diasParaCierre": 1,
       "nueva": true
     },
     {
@@ -851,7 +851,7 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3756-49-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 5,
+      "diasParaCierre": 4,
       "nueva": true
     },
     {
@@ -1295,7 +1295,7 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4314-46-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 9,
+      "diasParaCierre": 8,
       "nueva": true
     },
     {

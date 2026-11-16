@@ -227,3 +227,7 @@ input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible
 
 /* chip apagado: plazo de preguntas vencido */
 .chip.apagado { color: var(--gris-40); background: var(--gris-10); border-color: transparent; }
+
+/* licitaciones ya cerradas: se ven apagadas, pero conservan su marca */
+.item.cerrada .titulo, .item.cerrada .plazo .d { color: var(--gris-60); }
+.item.cerrada .plazo .d { font-weight: 550; }

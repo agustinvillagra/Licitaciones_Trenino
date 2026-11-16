@@ -128,12 +128,42 @@ function armarHtml(nuevas, resumen) {
 
 /** Manda por SMTP de Gmail. Llega a cualquier destinatario. */
 async function enviarPorGmail({ destino, asunto, html }) {
+  // Gmail muestra la contraseña de aplicación en grupos de cuatro; los
+  // espacios son solo visuales y hay que sacarlos antes de autenticar.
+  const clave = process.env.GMAIL_CLAVE_APP.replace(/\s+/g, '');
   const transporte = nodemailer.createTransport({
     service: 'gmail',
-    auth: { user: process.env.GMAIL_USUARIO, pass: process.env.GMAIL_CLAVE_APP },
+    auth: { user: process.env.GMAIL_USUARIO, pass: clave },
   });
-  const info = await transporte.sendMail({ from: ORIGEN, to: destino.join(', '), subject: asunto, html });
-  console.log(`Correo enviado por Gmail a ${destino.join(', ')} (id ${info.messageId})`);
+
+  try {
+    const info = await transporte.sendMail({
+      from: ORIGEN, to: destino.join(', '), subject: asunto, html,
+    });
+    console.log(`Correo enviado por Gmail a ${destino.join(', ')} (id ${info.messageId})`);
+  } catch (e) {
+    // Los errores de nodemailer a veces traen el mensaje vacío: lo que sirve
+    // está en code y response.
+    throw new Error(explicarGmail(e));
+  }
+}
+
+/** Traduce el error de Gmail a algo accionable. */
+function explicarGmail(e) {
+  const partes = [e.message || '(sin mensaje)', e.code && `code=${e.code}`, e.response && `respuesta=${e.response}`]
+    .filter(Boolean)
+    .join(' · ');
+
+  if (e.code === 'EAUTH') {
+    return `${partes}\n  Gmail rechazó las credenciales. Revisa que GMAIL_CLAVE_APP sea una ` +
+      'contraseña de aplicación de 16 caracteres (no la del correo) y que la cuenta ' +
+      'tenga activada la verificación en dos pasos.';
+  }
+  if (e.code === 'ESOCKET' || e.code === 'ETIMEDOUT' || e.code === 'ECONNECTION') {
+    return `${partes}\n  No se pudo abrir la conexión SMTP. Si esto ocurre en un entorno con ` +
+      'los puertos 465 y 587 bloqueados, no es problema de las credenciales.';
+  }
+  return partes;
 }
 
 /** Manda por Resend. Sin dominio verificado solo acepta al dueño de la cuenta. */

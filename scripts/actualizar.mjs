@@ -18,12 +18,16 @@ import { clasificar, sector, diasParaCierre, TIPOS } from '../lib/filtros.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ARCHIVO = resolve(RAIZ, 'public/data/licitaciones.json');
+// Las licitaciones que dejan de estar activas se guardan acá, para no perder
+// el registro de a cuáles se postuló.
+const HISTORIAL = resolve(RAIZ, 'public/data/historial.json');
+const MESES_HISTORIAL = 18;
 const HILOS = 3; // más que esto y la API devuelve 429
 
 // Subir este número cuando se agreguen campos al registro: obliga a volver a
 // bajar el detalle de todas, en vez de reusar los registros viejos sin el
 // campo nuevo.
-const VERSION_ESQUEMA = 2;
+const VERSION_ESQUEMA = 3;
 
 /** Corre fn sobre cada elemento con como máximo `limite` en vuelo. */
 async function enParalelo(elementos, limite, fn) {
@@ -39,11 +43,11 @@ async function enParalelo(elementos, limite, fn) {
   return resultados;
 }
 
-async function leerPrevio() {
+async function leerJson(ruta, porDefecto) {
   try {
-    return JSON.parse(await readFile(ARCHIVO, 'utf8'));
+    return JSON.parse(await readFile(ruta, 'utf8'));
   } catch {
-    return { licitaciones: [] };
+    return porDefecto;
   }
 }
 
@@ -89,7 +93,7 @@ async function main() {
   const inicio = Date.now();
   const hoy = new Date().toISOString().slice(0, 10);
 
-  const previo = await leerPrevio();
+  const previo = await leerJson(ARCHIVO, { licitaciones: [] });
   const mismoEsquema = previo.versionEsquema === VERSION_ESQUEMA;
   if (!mismoEsquema && previo.licitaciones?.length) {
     console.log('El esquema cambió: se vuelve a bajar el detalle de todas.');
@@ -152,10 +156,44 @@ async function main() {
   await mkdir(dirname(ARCHIVO), { recursive: true });
   await writeFile(ARCHIVO, `${JSON.stringify(salida, null, 2)}\n`, 'utf8');
 
+  // ---- historial: lo que estaba activo y ya no aparece ----
+  const vigentes = new Set(registros.map((r) => r.codigo));
+  const hist = await leerJson(HISTORIAL, { licitaciones: [] });
+  const yaArchivadas = new Map(hist.licitaciones.map((l) => [l.codigo, l]));
+
+  let cerradasAhora = 0;
+  for (const anterior of previo.licitaciones ?? []) {
+    if (vigentes.has(anterior.codigo) || yaArchivadas.has(anterior.codigo)) continue;
+    yaArchivadas.set(anterior.codigo, {
+      ...anterior,
+      nueva: false,
+      diasParaCierre: null,
+      archivadaEl: hoy,
+    });
+    cerradasAhora++;
+  }
+
+  // Se podan las muy viejas para que el archivo no crezca sin control.
+  const corte = new Date();
+  corte.setMonth(corte.getMonth() - MESES_HISTORIAL);
+  const archivadas = [...yaArchivadas.values()]
+    .filter((l) => !l.fechaCierre || new Date(l.fechaCierre) >= corte)
+    .sort((a, b) => new Date(b.fechaCierre ?? 0) - new Date(a.fechaCierre ?? 0));
+
+  await writeFile(
+    HISTORIAL,
+    `${JSON.stringify({ actualizado: ahora.toISOString(), versionEsquema: VERSION_ESQUEMA, licitaciones: archivadas }, null, 2)}\n`,
+    'utf8'
+  );
+
   console.log(
     `\nListo en ${Math.round((Date.now() - inicio) / 1000)}s — ` +
       `${salida.resumen.escolar} escolares, ${salida.resumen.corporativo} corporativas, ` +
       `${salida.resumen.nuevasHoy} nuevas hoy.`
+  );
+  console.log(
+    `Historial: ${cerradasAhora} cerraron desde la última corrida, ` +
+      `${archivadas.length} guardadas en total.`
   );
 }
 

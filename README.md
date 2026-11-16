@@ -42,7 +42,9 @@ arriba filtran por ellos:
 | ✕ Descartada | No sirve, sacarla de la vista | Pestaña *Descartadas* |
 
 Lo que no está marcado vive en **Por revisar**, que es la bandeja de entrada:
-la idea es dejarla vacía.
+la idea es dejarla vacía. Y en **Cerradas** queda el registro de las que ya
+pasaron, con la marca que tenían: así no se pierde el rastro de a cuáles se
+postuló. El historial guarda 18 meses.
 
 Las marcas son **compartidas**: quedan en una base de datos y cada marca
 guarda quién la puso y cuándo, así que en la tarjeta aparece "Postulada por
@@ -159,7 +161,9 @@ Node 22 y `fetch` nativo. Instalar con `npm ci`.
 | `scripts/actualizar.mjs` | El proceso diario: consulta, filtra, guarda |
 | `scripts/enviar-correo.mjs` | Resumen por Resend; no envía nada si no hay novedades |
 | `scripts/servidor.mjs` | Servidor estático para desarrollo |
-| `public/` | La página: `index.html`, `app.js`, `styles.css` y el JSON de datos |
+| `public/data/licitaciones.json` | Las abiertas hoy |
+| `public/data/historial.json` | Las que ya cerraron, archivadas 18 meses |
+| `public/` | La página: `index.html`, `app.js`, `styles.css` |
 | `public/app.js` | Render, filtros y las marcas en `localStorage` |
 | `.github/workflows/actualizar.yml` | El cron diario |
 

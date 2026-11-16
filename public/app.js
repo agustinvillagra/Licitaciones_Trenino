@@ -14,6 +14,7 @@ const MARCAS = { FAV: 'favorita', POST: 'postulada', DESC: 'descartada' };
 
 const estado = {
   datos: null,
+  historial: [], // licitaciones que ya cerraron, para no perder el registro
   marcas: {}, // codigo -> { marca, por, cuando }
   modo: 'local', // 'compartido' cuando la base responde
   nombre: '',
@@ -153,13 +154,17 @@ function porVista(l) {
     case 'favoritas': return m === MARCAS.FAV;
     case 'postuladas': return m === MARCAS.POST;
     case 'descartadas': return m === MARCAS.DESC;
+    case 'cerradas': return true; // el historial completo
     default: return true;
   }
 }
 
+/** De dónde salen las tarjetas: las abiertas, o el historial. */
+const fuente = () => (estado.vista === 'cerradas' ? estado.historial : estado.datos.licitaciones);
+
 function visibles() {
   const t = estado.texto.trim().toLowerCase();
-  return estado.datos.licitaciones
+  return fuente()
     .filter(porVista)
     .filter((l) => !estado.linea || l.linea === estado.linea)
     .filter((l) => !estado.region || l.region === estado.region)
@@ -202,10 +207,11 @@ function pintarSegmentos() {
     postuladas: cuenta(MARCAS.POST),
     descartadas: cuenta(MARCAS.DESC),
     todas: estado.datos.licitaciones.length,
+    cerradas: estado.historial.length,
   };
   const nombres = {
     pendientes: 'Por revisar', favoritas: 'Favoritas', postuladas: 'Postuladas',
-    descartadas: 'Descartadas', todas: 'Todas',
+    descartadas: 'Descartadas', todas: 'Todas', cerradas: 'Cerradas',
   };
   for (const b of document.querySelectorAll('.seg')) {
     const v = b.dataset.vista;
@@ -250,9 +256,10 @@ function hace(iso) {
 function tarjeta(l) {
   const reg = estado.marcas[l.codigo];
   const m = reg?.marca;
+  const cerrada = estado.vista === 'cerradas';
   const p = plazo(l.diasParaCierre);
   const abierta = estado.abiertas.has(l.codigo);
-  const clases = ['item', m ?? ''].filter(Boolean).join(' ');
+  const clases = ['item', m ?? '', cerrada ? 'cerrada' : ''].filter(Boolean).join(' ');
 
   const items = l.items.length
     ? `<h4>Qué piden</h4>
@@ -284,8 +291,8 @@ function tarjeta(l) {
         </div>
         ${reg ? `<p class="firma">${etiquetaMarca(reg.marca)}${reg.por ? ` por ${escapar(reg.por)}` : ''} · ${hace(reg.cuando)}</p>` : ''}
       </div>
-      <div class="plazo ${p.clase}">
-        <div class="d">${p.texto}</div>
+      <div class="plazo ${cerrada ? '' : p.clase}">
+        <div class="d">${cerrada ? 'cerrada' : p.texto}</div>
         <div class="f">${fechaHora(l.fechaCierre)}</div>
       </div>
       <div class="marcas">
@@ -329,7 +336,9 @@ function pintarLista() {
     vacio.textContent =
       estado.vista === 'pendientes'
         ? 'No queda nada por revisar. Buen trabajo.'
-        : 'No hay licitaciones que calcen con este filtro.';
+        : estado.vista === 'cerradas'
+          ? 'Todavía no cierra ninguna. Acá va a quedar el registro de las que pasaron, con la marca que les pusiste.'
+          : 'No hay licitaciones que calcen con este filtro.';
   }
 
   const nuevas = lista.filter((l) => l.nueva).length;
@@ -448,6 +457,13 @@ async function iniciar() {
        Si acabas de publicar el sitio, espera a que corra la primera actualización.</p>`;
     return;
   }
+  try {
+    const h = await fetch(`data/historial.json?v=${Date.now()}`);
+    if (h.ok) estado.historial = (await h.json()).licitaciones ?? [];
+  } catch {
+    estado.historial = [];
+  }
+
   pintarSello();
   pintarIdentidad();
   llenarRegiones();
