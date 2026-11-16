@@ -406,7 +406,8 @@ function pintarIdentidad() {
     `<span class="punto ${compartido ? 'ok' : 'solo'}"></span>` +
     (compartido
       ? `Marcas compartidas con el equipo · ${quien}`
-      : `Base compartida sin conectar: las marcas quedan en este equipo · ${quien}`);
+      : `Base sin conectar, las marcas quedan en este equipo · ` +
+        `<a class="como" href="api/diagnostico" target="_blank" rel="noopener">ver por qué</a> · ${quien}`);
   $('#cambiarNombre')?.addEventListener('click', pedirNombre);
 }
 
