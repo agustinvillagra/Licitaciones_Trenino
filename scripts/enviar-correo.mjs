@@ -225,6 +225,12 @@ async function main() {
 }
 
 main().catch((e) => {
-  console.error('Falló el envío del correo:', e.message);
-  process.exit(1);
+  // El correo es un aviso, no el trabajo principal. Si falla, se deja
+  // constancia pero no se cae la corrida: lo que importa es que la página
+  // quede actualizada y que los datos se guarden.
+  console.error('::warning::No se pudo enviar el correo:', e.message);
+  console.error(
+    '\nLa actualización de las licitaciones sí se completó. Revisa las ' +
+      'credenciales de envío y vuelve a correr el workflow si quieres reintentarlo.'
+  );
 });
