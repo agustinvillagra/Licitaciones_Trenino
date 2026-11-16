@@ -1,21 +1,38 @@
 /**
- * Envía por Resend el resumen de las licitaciones nuevas del día.
+ * Envía el resumen de las licitaciones nuevas del día.
  *
- * Corre después de actualizar.mjs y solo manda correo si hay novedades:
- * si no hay licitaciones nuevas, no molesta a nadie.
+ * Corre después de actualizar.mjs y solo manda correo si hay novedades: si no
+ * hay licitaciones nuevas, no molesta a nadie.
  *
- * Variables de entorno:
- *   RESEND_API_KEY   obligatoria
+ * Hay dos formas de enviar y elige sola la que esté configurada:
+ *
+ *   1. Gmail (recomendada). Manda desde una cuenta real de Gmail por SMTP, así
+ *      que llega a cualquier destinatario sin verificar dominios.
+ *        GMAIL_USUARIO    la cuenta, por ejemplo comunicaciones.trenino@gmail.com
+ *        GMAIL_CLAVE_APP  contraseña de aplicación de 16 caracteres, no la del correo
+ *
+ *   2. Resend. Más prolija si algún día se verifica un dominio propio, pero
+ *      mientras no lo haya solo deja enviar al dueño de la cuenta.
+ *        RESEND_API_KEY
+ *
+ * Comunes:
  *   CORREO_DESTINO   uno o varios, separados por coma
- *   CORREO_ORIGEN    opcional; por defecto el dominio de pruebas de Resend
+ *   CORREO_ORIGEN    opcional; nombre y dirección del remitente
  *   SITIO_URL        opcional; el enlace "ver todas" del correo
  */
 
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import nodemailer from 'nodemailer';
 
 const RAIZ = resolve(import.meta.dirname, '..');
-const ORIGEN = process.env.CORREO_ORIGEN || 'Licitaciones Trenino <onboarding@resend.dev>';
+const porGmail = () => Boolean(process.env.GMAIL_USUARIO && process.env.GMAIL_CLAVE_APP);
+
+const ORIGEN =
+  process.env.CORREO_ORIGEN ||
+  (porGmail()
+    ? `Licitaciones Trenino <${process.env.GMAIL_USUARIO}>`
+    : 'Licitaciones Trenino <onboarding@resend.dev>');
 const SITIO = process.env.SITIO_URL || '';
 
 const pesos = (n) =>
@@ -107,15 +124,51 @@ function armarHtml(nuevas, resumen) {
   </table></body></html>`;
 }
 
+/* ─────────────────────────── envío ─────────────────────────── */
+
+/** Manda por SMTP de Gmail. Llega a cualquier destinatario. */
+async function enviarPorGmail({ destino, asunto, html }) {
+  const transporte = nodemailer.createTransport({
+    service: 'gmail',
+    auth: { user: process.env.GMAIL_USUARIO, pass: process.env.GMAIL_CLAVE_APP },
+  });
+  const info = await transporte.sendMail({ from: ORIGEN, to: destino.join(', '), subject: asunto, html });
+  console.log(`Correo enviado por Gmail a ${destino.join(', ')} (id ${info.messageId})`);
+}
+
+/** Manda por Resend. Sin dominio verificado solo acepta al dueño de la cuenta. */
+async function enviarPorResend({ destino, asunto, html }) {
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ from: ORIGEN, to: destino, subject: asunto, html }),
+  });
+  const cuerpo = await res.json().catch(() => ({}));
+
+  if (res.status === 403 && cuerpo?.name === 'validation_error') {
+    console.warn(
+      '\nResend rechazó el envío porque la cuenta no tiene un dominio verificado.\n' +
+        `  ${cuerpo.message}\n` +
+        '  Lo más rápido es configurar GMAIL_USUARIO y GMAIL_CLAVE_APP y enviar por Gmail.\n' +
+        '  La página sí quedó actualizada; solo no salió el correo.'
+    );
+    return;
+  }
+  if (!res.ok) throw new Error(`Resend respondió ${res.status}: ${JSON.stringify(cuerpo)}`);
+  console.log(`Correo enviado por Resend a ${destino.join(', ')} (id ${cuerpo.id ?? '?'})`);
+}
+
 async function main() {
-  const clave = process.env.RESEND_API_KEY;
   const destino = (process.env.CORREO_DESTINO || '')
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean);
 
-  if (!clave) {
-    console.log('No hay RESEND_API_KEY: se omite el correo.');
+  if (!porGmail() && !process.env.RESEND_API_KEY) {
+    console.log('No hay forma de enviar configurada (ni Gmail ni Resend): se omite el correo.');
     return;
   }
   if (!destino.length) {
@@ -135,37 +188,10 @@ async function main() {
     nuevas.length === 1
       ? '1 licitación nueva de vestuario'
       : `${nuevas.length} licitaciones nuevas de vestuario`;
+  const html = armarHtml(nuevas, datos.resumen);
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${clave}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: ORIGEN,
-      to: destino,
-      subject: asunto,
-      html: armarHtml(nuevas, datos.resumen),
-    }),
-  });
-
-  const cuerpo = await res.json().catch(() => ({}));
-
-  // Resend, mientras no haya un dominio verificado, solo deja enviar al correo
-  // del dueño de la cuenta. No es un error del código: es la cuenta que falta
-  // configurar, y no tiene sentido que haga fallar la actualización diaria.
-  if (res.status === 403 && cuerpo?.name === 'validation_error') {
-    console.warn(
-      '\nResend rechazó el envío porque la cuenta todavía no tiene un dominio verificado.\n' +
-        `  ${cuerpo.message}\n` +
-        '  Para desbloquearlo: verificar trenino.cl en resend.com/domains y poner\n' +
-        '  CORREO_ORIGEN con una dirección de ese dominio. Mientras tanto, dejar\n' +
-        '  CORREO_DESTINO con el correo dueño de la cuenta.\n' +
-        '  La página sí quedó actualizada; solo no salió el correo.'
-    );
-    return;
-  }
-
-  if (!res.ok) throw new Error(`Resend respondió ${res.status}: ${JSON.stringify(cuerpo)}`);
-  console.log(`Correo enviado a ${destino.join(', ')} — ${nuevas.length} nuevas (id ${cuerpo.id ?? '?'})`);
+  if (porGmail()) await enviarPorGmail({ destino, asunto, html });
+  else await enviarPorResend({ destino, asunto, html });
 }
 
 main().catch((e) => {

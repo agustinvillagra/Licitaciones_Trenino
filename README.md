@@ -104,9 +104,10 @@ En **Settings → Secrets and variables → Actions**:
 | Tipo | Nombre | Qué es |
 |---|---|---|
 | Secret | `TICKET_MERCADO_PUBLICO` | Ticket de la API de ChileCompra |
-| Secret | `RESEND_API_KEY` | Clave de Resend, empieza con `re_` |
+| Secret | `GMAIL_USUARIO` | La cuenta que envía, por ejemplo `comunicaciones.trenino@gmail.com` |
+| Secret | `GMAIL_CLAVE_APP` | Contraseña de aplicación de 16 caracteres de esa cuenta |
 | Secret | `CORREO_DESTINO` | Destinatarios separados por coma |
-| Variable | `CORREO_ORIGEN` | Remitente. Sin dominio propio: `Licitaciones Trenino <onboarding@resend.dev>` |
+| Variable | `CORREO_ORIGEN` | Remitente, por ejemplo `Licitaciones Trenino <comunicaciones.trenino@gmail.com>` |
 | Variable | `SITIO_URL` | URL del sitio en Vercel, para el botón del correo |
 
 ### 2. Base de datos de las marcas
@@ -142,7 +143,8 @@ npm run dev                 # sirve la página en http://localhost:3000
 npm run correo              # manda el correo de prueba
 ```
 
-No hay dependencias que instalar: todo usa Node 20+ y `fetch` nativo.
+La única dependencia es `nodemailer`, para el envío por Gmail. El resto usa
+Node 22 y `fetch` nativo. Instalar con `npm ci`.
 
 ---
 
@@ -171,6 +173,10 @@ No hay dependencias que instalar: todo usa Node 20+ y `fetch` nativo.
 - **El campo `vistaPrimeraVez`** guarda cuándo se vio por primera vez cada
   licitación; de ahí sale la marca "Nueva" y el contenido del correo.
 - **El correo no se manda si no hay novedades**, para que no se vuelva ruido.
+- **El envío usa Gmail por SMTP.** Se eligió sobre Resend porque Resend, sin un
+  dominio verificado, solo deja enviar al dueño de la cuenta. Si algún día se
+  verifica `trenino.cl`, basta quitar las variables de Gmail y poner
+  `RESEND_API_KEY`: el script detecta sola cuál usar.
 - **`VERSION_ESQUEMA` en `actualizar.mjs`**: al agregar campos al registro hay
   que subir ese número, si no el script reusa los registros viejos sin el
   campo nuevo y queda a medias.
