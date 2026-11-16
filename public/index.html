@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Licitaciones · Trenino</title>
+    <meta
+      name="description"
+      content="Licitaciones públicas abiertas de vestuario escolar y corporativo."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="contenedor cabecera-fila">
+        <div>
+          <h1>Licitaciones públicas de vestuario</h1>
+          <p class="sub">
+            Lo que está abierto hoy en Mercado Público y le sirve a Trenino.
+          </p>
+        </div>
+        <div class="actualizado">
+          <span id="sello">Cargando…</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <section class="tarjetas" id="tarjetas" aria-label="Resumen"></section>
+
+      <nav class="pestanas" id="pestanas" role="tablist">
+        <button class="pestana activa" data-linea="todas" role="tab">Todas</button>
+        <button class="pestana" data-linea="escolar" role="tab">Uniforme escolar</button>
+        <button class="pestana" data-linea="corporativo" role="tab">Vestuario corporativo</button>
+      </nav>
+
+      <div class="controles">
+        <input
+          type="search"
+          id="busqueda"
+          placeholder="Buscar por nombre, organismo o comuna…"
+          aria-label="Buscar"
+        />
+        <select id="region" aria-label="Región"><option value="">Todas las regiones</option></select>
+        <select id="orden" aria-label="Ordenar">
+          <option value="cierre">Cierra antes</option>
+          <option value="nuevas">Nuevas primero</option>
+          <option value="monto">Monto estimado</option>
+        </select>
+        <label class="check">
+          <input type="checkbox" id="soloNuevas" />
+          Solo nuevas
+        </label>
+      </div>
+
+      <p class="conteo" id="conteo"></p>
+      <div id="lista" class="lista"></div>
+      <p class="vacio oculto" id="vacio">No hay licitaciones que calcen con el filtro.</p>
+    </main>
+
+    <footer class="contenedor pie">
+      <p>
+        Fuente: API pública de Mercado Público (ChileCompra). La lista se
+        actualiza una vez al día de forma automática. Los filtros son los mismos
+        del análisis de mercado del proyecto: ver
+        <code>lib/filtros.mjs</code> en el repositorio.
+      </p>
+      <p class="aviso">
+        Es una ayuda de búsqueda, no un reemplazo de Mercado Público. Antes de
+        postular hay que entrar a la ficha oficial y leer las bases.
+      </p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

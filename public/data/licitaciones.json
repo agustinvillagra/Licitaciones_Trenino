@@ -1,0 +1,1745 @@
+{
+  "actualizado": "2026-11-16T12:39:38.597Z",
+  "totalActivasChileCompra": 5308,
+  "resumen": {
+    "escolar": 7,
+    "corporativo": 35,
+    "nuevasHoy": 42
+  },
+  "licitaciones": [
+    {
+      "codigo": "1216062-37-LE26",
+      "nombre": "POLERAS ESTAMPADAS",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "Corporación Municipal de Lo Prado",
+      "unidad": "Corporación Municipal de Lo Prado",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Lo Prado",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "“ADQUISICIÓN DE 4000 POLERAS ESTAMPADAS PARA LA CORRIDA FAMILIAR, COLOR LO PRADO RUN 2026, DE LA CORPORACIÓN MUNICIPAL DE LO PRADO”",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-16T15:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Prendas de deporte y buzos de mujer",
+          "descripcion": "“ADQUISICIÓN DE 4000 POLERAS ESTAMPADAS PARA LA CORRIDA FAMILIAR, COLOR LO PRADO RUN 2026, DE LA CORPORACIÓN MUNICIPAL DE LO PRADO”",
+          "cantidad": 4000,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1216062-37-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "1426037-35-LE26",
+      "nombre": "Adquisición uniformes personal movilización",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "Corporación Municipal de Desarrollo Social de Colina",
+      "unidad": "CORPCOLINA EDUCACION",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Colina",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Adquirir uniformes para el Área de Movilización de Educación de la Corporación Municipal de Desarrollo Social de Colina, conforme a las prendas, cantidades y especificaciones técnicas establecidas en la Solicitud de Compra, de acuerdo con los requerimientos señalados para el personal correspondiente.",
+      "fechaPublicacion": "2026-11-02",
+      "fechaCierre": "2026-11-16T15:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Remítase a las bases técnicas de la resolución exenta adjunta N°326 del 02 de noviembre del 2026.",
+          "cantidad": 1,
+          "unidad": "Unidad no definida"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1426037-35-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "2920-46-LE26",
+      "nombre": "Adquisición de ropa de trabajo planta eléctrica",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE JUAN FERNANDEZ",
+      "unidad": "I MUNICIPALIDAD DE JUAN FERNANDEZ",
+      "sector": "Municipalidades",
+      "region": "Región de Valparaíso ",
+      "comuna": "Juan Fernández",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Ropa de trabajo y elementos de seguridad del personal de la planta eléctrica.",
+      "fechaPublicacion": "2026-11-04",
+      "fechaCierre": "2026-11-16T15:00:00",
+      "montoEstimado": 15094692,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Zapatos de hombre",
+          "descripcion": "Ropa de trabajo y elementos de seguridad para personal de la planta eléctrica, según documento adjunto.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Botas de hombre",
+          "descripcion": "7 pares de botas según descripción del item ",
+          "cantidad": 7,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2920-46-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "4042-10-CO26",
+      "nombre": "VESTUARIO INSTITUCIONAL ",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE FRESIA",
+      "unidad": "Departamento De Salud Municipal",
+      "sector": "Municipalidades",
+      "region": "Región de los Lagos ",
+      "comuna": "Fresia",
+      "tipo": "CO",
+      "tipoDescripcion": "Compra coordinada",
+      "descripcion": "La adquisición de vestuario institucional se requiere para proporcionae a los funcionarios del Departamento de Salud Municipal prendas adecuadas para el desarrollo de sus funciones. considerando criterios de presentación, identificación Institucional, funcionalidad y condiciones propias de las labores desempeñadas. Asimismo, permite estandarizar la imagen institucional.",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-16T15:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "Adquisición de 87 chaquetas insuladas de pluma o equivalente, distribuidas de la siguiente manera:\r\nDama: 61 unidades.\r\nTallas: XS, S, M, L, XL y XXL.\r\nVarón: 26 unidades.\r\nTallas: S, M, L, XL y XXL.\r\n",
+          "cantidad": 87,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Vestuario",
+          "descripcion": "Adquisición de 34 polar, distribuidas de la siguiente manera: Dama: 19 unidades. Tallas: XS, S, M, L, XL y XXL. Varón: 15 unidades. Tallas: S, M, L, XL y XXL.",
+          "cantidad": 34,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Vestuario",
+          "descripcion": "Adquisición de 34 Pantalon termico Softshell Impermeable, Con Micropolar, distribuidas de la siguiente manera: Dama: 19 unidades. Tallas: XS, S, M, L, XL y XXL. Varón: 15 unidades. Tallas: S, M, L, XL y XXL.",
+          "cantidad": 34,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Vestuario",
+          "descripcion": "Adquisición de  10 chaquetas semi impermeable para TENS y Conductores del Servicio de Urgencia, distribuidas de la siguiente manera: \r\nTENS. Dama: 1 unidad, \r\nTENS. Varon: 2 unidades,\r\nConductor Dama: 1 unidad ,\r\nConductor Varon: 6 unidades.\r\n",
+          "cantidad": 10,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Vestuario",
+          "descripcion": "Adquisición de 20 poletas tipo pique para TENS. y Conductores del Servicio de Urgencia, distribuidas de la siguiente manera: TENS. Dama: 2 unidad, TENS. Varon: 4 unidades, Conductor Dama: 2 unidad , Conductor Varon: 12 unidades.",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Vestuario",
+          "descripcion": "Adquisición de 20 Pantalon para TENS. y Conductores del Servicio de Urgencia, distribuidas de la siguiente manera: TENS. Dama: 2 unidad, TENS. Varon: 4 unidades, Conductor Dama: 2 unidad , Conductor Varon: 12 unidades.",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4042-10-CO26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "2555-16-LE26",
+      "nombre": "CHAQUETAS Y PANTALON  SIC 648 programa PEE",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "CORP NACIONAL FORESTAL",
+      "unidad": "IV Región - Oficina Regional de Coquimbo",
+      "sector": "Otro sector público",
+      "region": "Región de Coquimbo ",
+      "comuna": "Coquimbo",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN CHAQUETAS Y PANTALONES EN TELA GABARDINA 80% POLIÉSTER Y 20% ALGODÓN PARA FAENAS - PROGRAMA DE EMERGENCIA DE EMPLEO COQUIMBO 2026  \r\nSIC 648  SIRE 568",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-16T15:01:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Abrigos y chaquetas para hombre",
+          "descripcion": "CHAQUETA MANGA LARGA \r\n\r\n•\tChaqueta \r\n•\tTela gabardina.\r\n•\tCierre nylon a la vista separable.\r\n•\t 4 Bolsillos con fuelle, tapeta y cierre. Distribuidos 2 en nivel superior y 2 bolsillos en nivel inferior.\r\n•\t80% Poliéster \r\n•\t20% Algodón.\r\n•\t235 g..\r\n•\tPu",
+          "cantidad": 580,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Pantalones y short para hombre",
+          "descripcion": "PANTALON CARGO \r\n\r\n•\tPantalón cargo multifuncional Gris/ Naranjo\r\n•\tTela Gabardina \r\n•\tCintura ajustable.\r\n•\tCierre nylon a la vista separable.\r\n•\tConvertible en bermuda.\r\n•\t80% Poliéster.\r\n•\t20% Algodón.\r\n•\t235 gr\r\n•\tMínimo 6 bolsillos funcionales, consi",
+          "cantidad": 580,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2555-16-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "558869-69-LE26",
+      "nombre": "ADQUISICIÓN DE ROPA DEPORTIVA",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "CORP MUNICIPAL DE DESARROLLO SOCIAL DE A",
+      "unidad": "ADQUISICIONES - DIRECC ADMIN Y FINANZAS",
+      "sector": "Municipalidades",
+      "region": "Región de Antofagasta ",
+      "comuna": "Antofagasta",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN DE ROPA DEPORTIVA PARA ESTABLECIMIENTOS EDUCACIONALES PERTENECIENTES A LA CORPORACIÓN MUNICIPAL DE DESARROLLO SOCIAL DE ANTOFAGASTA\r\n\r\nLas presentes bases administrativas tienen por objeto regular el llamado a propuesta pública para la adquisición de ropa deportiva para distintas unidades educativas con el fin de cumplir con las solicitudes realizadas por las distintas unidades educativas. Las condiciones del presente llamado se singularizan en las bases administrativas y en las bases técnicas de la presente propuesta.",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-16T15:05:00",
+      "montoEstimado": 44523980,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 1: Indumentaria de Natación, según especificaciones técnicas.",
+          "cantidad": 52,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 2: Indumentaria de Judo, según especificaciones técnicas.",
+          "cantidad": 101,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 3: Indumentaria de Ballet, según especificaciones técnicas.",
+          "cantidad": 360,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 4: Petos Deportivos, según especificaciones técnicas.",
+          "cantidad": 1329,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 5: Pechera, según especificaciones técnicas.",
+          "cantidad": 30,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 6: Indumentaria Deportiva, según especificaciones técnicas.",
+          "cantidad": 826,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Línea 7: Ropa Deportiva, según especificaciones técnicas.",
+          "cantidad": 922,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=558869-69-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "2426-57-LP26",
+      "nombre": "SUMINISTRO INDUMENTARIA CORPORATIVA",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE VALPARAISO",
+      "unidad": "ADQUISICIONES MAYORES",
+      "sector": "Municipalidades",
+      "region": "Región de Valparaíso ",
+      "comuna": "Valparaíso",
+      "tipo": "LP",
+      "tipoDescripcion": "1.000 a 2.000 UTM",
+      "descripcion": "SUMINISTRO INDUMENTARIA CORPORATIVA, SEGÚN PEDIDO N9 DE LA DIRECCIÓN DE ADMINISTRACION Y FINANZAS",
+      "fechaPublicacion": "2026-10-27",
+      "fechaCierre": "2026-11-16T15:30:00",
+      "montoEstimado": 189104000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "SUMINISTRO INDUMENTARIA CORPORATIVA",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2426-57-LP26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "1029-26-LE26",
+      "nombre": "Adquisición EPP pantalón DRV Maule",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+      "unidad": "Dirección de Vialidad - VII Región - Dirección Regional",
+      "sector": "Otro sector público",
+      "region": "Región del Maule ",
+      "comuna": "Talca",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "La Dirección de Vialidad, solicita adquisición de Elemento de protección Personal para funcionarios que desempeñan labores asociadas a CAD y para otros funcionarios que realizan labores en terreno, pertenecientes a la Dirección Regional de Vialidad, Región del Maule.",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-16T16:00:00",
+      "montoEstimado": 15698600,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Pantalones protectores",
+          "descripcion": "PANTALÓN RIPSTOP SPANDEX VERDE CONTROL UV",
+          "cantidad": 545,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1029-26-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "2427-102-LE26",
+      "nombre": "SUMINISTRO CALZADO DE SEGURIDAD",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE VALPARAISO",
+      "unidad": "ABASTECIMIENTO",
+      "sector": "Municipalidades",
+      "region": "Región de Valparaíso ",
+      "comuna": "",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "PEDIDO N°10 ADMINISTRACIÓN Y FINANZAS-GESTIÓN DE PERSONAL ",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-16T16:00:00",
+      "montoEstimado": 52916000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Zapatos de hombre",
+          "descripcion": "Suministro calzado de seguridad.- SE ADJUNTAN TÉRMINOS DE REFERENCIA",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2427-102-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "4290-79-LE26",
+      "nombre": "Adq. vestimenta institucional funcionarios",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE LIMACHE",
+      "unidad": "Secpla - MUNICIPALIDAD LIMACHE",
+      "sector": "Municipalidades",
+      "region": "Región de Valparaíso ",
+      "comuna": "Limache",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN DE VESTIMENTA INSTITUCIONAL FUNCIONARIOS MUNICIPALES 2026",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-16T16:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "ADQUISICIÓN DE VESTIMENTA INSTITUCIONAL FUNCIONARIOS MUNICIPALES 2026",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4290-79-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 1,
+      "nueva": true
+    },
+    {
+      "codigo": "3933-78-L126",
+      "nombre": "ZAPATILLAS CORTA VIENTO Y MOCHILAS PARA ESCUELA DE RAIMAPU FONDOS PRO RETENCION”",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "I MUNICIPALIDAD DE FREIRE",
+      "unidad": "Departamento de Educación",
+      "sector": "Municipalidades",
+      "region": "Región de la Araucanía ",
+      "comuna": "Freire",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "ZAPATILLAS, CORTA VIENTO Y MOCHILAS PARA ESCUELA DE RAIMAPU, FONDOS PRO RETENCION”",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-17T10:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Zapatillas de descanso de hombre",
+          "descripcion": "ZAPATILLAS, CORTA VIENTO Y MOCHILAS PARA ESCUELA DE RAIMAPU, FONDOS PRO RETENCION”",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3933-78-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "3996-55-L126",
+      "nombre": "Adquisición de Uniformes  Corporativos",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE COLTAUCO",
+      "unidad": "Departamento De Salud",
+      "sector": "Municipalidades",
+      "region": "Región del Libertador General Bernardo O´Higgins",
+      "comuna": "Coltauco",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "La necesidad de realizar la a Adquisición de Uniformes  Corporativos.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-17T12:00:00",
+      "montoEstimado": 1200000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Blusa con logo institucional (Dpto. Salud), según descripción de bases adjunta",
+          "cantidad": 23,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Camisa Oxford hombre con logo institucional (Dpto. Salud), según descripción de bases adjunta.",
+          "cantidad": 3,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Blusa con logo institucional (Farmacia Municipal), según descripción de bases adjunta",
+          "cantidad": 4,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Polera  polo dryfresh mujer con logo institucional (Dpto. Salud), según descripción de bases adjuntas.",
+          "cantidad": 19,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Polera polo dryfresh hombre con logo institucional (Dpto. Salud), según descripción de bases adjuntas.",
+          "cantidad": 24,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Uniforme clínico mujer completo + top adicional con logo (Dpto. Salud), según descripción de bases adjuntas.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Uniforme clínico mujer completo + top adicional con logo (UAPORRINO), según descripción de bases adjuntas.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Uniforme clínico mujer completo + top adicional con logo (Farmacia Municipal), según descripción de bases adjuntas.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Uniforme clínico hombre completo + top adicional con logo (UAPORRINO), según descripción de bases adjuntas.",
+          "cantidad": 2,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Uniforme clínico hombre completo + top adicional con logo (Farmacia Municipal), según descripción de bases adjuntas.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3996-55-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "5251-103-LE26",
+      "nombre": "Confeccion de Uniformes Equipo de expositores",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+      "unidad": "DEPARTAMENTO DE ABASTECIMIENTO",
+      "sector": "Educación",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Santiago",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Dotar al equipo de expositores de uniformes institucionales que refuercen la identidad de la Universidad y aseguren una presencia formal, uniforme y reconocible en actividades de admisión, difusión, ferias y eventos oficiales.",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-17T15:00:00",
+      "montoEstimado": 9000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Prendas de deporte y buzos de hombre",
+          "descripcion": "Confeccion Uniformes Equipo de Expositores",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5251-103-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "3935-125-LE26",
+      "nombre": "ADQUISICIÓN DE VESTUARIO PARA FUNC. MUNICIPALES",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE FREIRE",
+      "unidad": "Secretaria de Planificación",
+      "sector": "Municipalidades",
+      "region": "Región de la Araucanía ",
+      "comuna": "Freire",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN DE CHAQUETA TIPO SOFTSHELL MANGA LARGA PARA DAMA Y VARÓN COLOR NEGRA, Y POLERAS TIPO PIQUÉ, MANGA CORTA DAMAVARÓN",
+      "fechaPublicacion": "2026-11-06",
+      "fechaCierre": "2026-11-17T16:00:00",
+      "montoEstimado": 12240000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "LINEA N°1: ADQUISICIÓN DE POLERAS TIPO PIQUÉ, MANGA CORTA DAMA/VARÓN",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Vestuario",
+          "descripcion": "LINEA N°2: POLERAS TIPO PIQUÉ, MANGA CORTA DAMA/VARÓN",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3935-125-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "3935-126-LE26",
+      "nombre": "VESTUARIO PARA ESTUDIANTES LICEO FREIRE",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "I MUNICIPALIDAD DE FREIRE",
+      "unidad": "Secretaria de Planificación",
+      "sector": "Municipalidades",
+      "region": "Región de la Araucanía ",
+      "comuna": "Freire",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ZAPATILLAS, POLERONES, CASACAS Y BUZOS PARA LICEO JUAN SCHLEYER, FONDOS PRO RETENCIÓN",
+      "fechaPublicacion": "2026-11-06",
+      "fechaCierre": "2026-11-17T16:00:00",
+      "montoEstimado": 16400000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "ZAPATILLAS, POLERONES, CASACAS Y BUZOS PARA LICEO JUAN SCHLEYER, FONDOS PRO RETENCIÓN",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3935-126-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "1316747-34-L126",
+      "nombre": "Confección de vestuario ballet El Principito",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "CORPORACION CULTURAL MUNICIPAL DE LOS ANGELES",
+      "unidad": "Departamento de Administración",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Los Angeles",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "La Corporación Cultural Municipal de Los Ángeles, a través de su Escuela de Ballet y Danza, requiere contratar la confección del vestuario ítems 1 al 15 y la reparación de vestuario existente ítem 16 para la obra de ballet El Principito, Gala de egreso de la Escuela. Servicio único, evaluado y adjudicado en su totalidad a un solo oferente, conforme a las bases y Anexo N°3.",
+      "fechaPublicacion": "2026-11-09",
+      "fechaCierre": "2026-11-17T17:00:00",
+      "montoEstimado": 1800000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "Confección de vestuario (ítems 1 al 15) y reparación de vestuario existente (ítem 16) para la obra de ballet \"El Principito\", Gala de egreso de la Escuela de Ballet y Danza. Servicio único, adjudicado a un solo oferente. Detalle en bases.",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1316747-34-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "3017-74-L126",
+      "nombre": "POLERAS Y JOCKET PARA HPV LOTA",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE LOTA",
+      "unidad": "Departamento de Adquisiciones",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Lota",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "POLERAS Y JOCKET PARA HPV, LOTA, SEGUN FOLIO ADJUNTOS CON ESTAMPADO, SE GENERARAN 3 ORDENES DE COMPRAS PARA HPV I, HP II Y HPV III, CADA UNO CON SUS MONTOS ASIGNADOS",
+      "fechaPublicacion": "2026-11-09",
+      "fechaCierre": "2026-11-18T09:20:00",
+      "montoEstimado": 345000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Ropa reflectante o accesorios",
+          "descripcion": "POLERA NEGRA DE ALGODON CON ESTAMPADO A COLOR LOGO HPV (TALLAS DAMA: 3M, 2L, 2XL, 2 XXXL), (TALLAS VARON: 1S, 3L)",
+          "cantidad": 13,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Sombreros",
+          "descripcion": "JOCKEY MALLA MEMPHIS NEGRO CON ESTAMPADO LOGO HPV",
+          "cantidad": 9,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3017-74-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 2,
+      "nueva": true
+    },
+    {
+      "codigo": "3678-28-LE26",
+      "nombre": "ADQUISICION ROPA CORPORATIVA MUNICIPALIDAD DE PETO",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE PETORCA",
+      "unidad": "ADQUISICIONES",
+      "sector": "Municipalidades",
+      "region": "Región de Valparaíso ",
+      "comuna": "Petorca",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "La presente licitación pública tiene por objetivo general adquirir ropa corporativa para los funcionarios  de Calidad Planta y Contrata tales como ,poleras , chaquetas  etc.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-18T16:00:00",
+      "montoEstimado": 12000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "ropa  corporativa , poleras , chaquetas , polerones, blusas y camisas  , damas y varones",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3678-28-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 3,
+      "nueva": true
+    },
+    {
+      "codigo": "935-34-LE26",
+      "nombre": "COMPRA IMPLEMENTOS E INDUMENTARIA IND XII REGION",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "INSTITUTO NACIONAL DE DEPORTES DE CHILE",
+      "unidad": "I.N.D. REGION XII",
+      "sector": "Otro sector público",
+      "region": "Región de Magallanes y de la Antártica",
+      "comuna": "Punta Arenas",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "COMPRA DE IMPLEMENTOS E INDUMENTARIA INSTITUTO NACIONAL DE DEPORTES REGIÓN DE MAGALLANES.",
+      "fechaPublicacion": "2026-11-06",
+      "fechaCierre": "2026-11-19T09:00:00",
+      "montoEstimado": 13619250,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Indumentaria deportiva general y natación Promesas Chile. (Monto Disponible: $3.475.000.- según bases administrativasm técnicas y anexos adjuntos.",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Indumentaria deportiva Promesas Chile Judo. (Monto Disponible: $5.700.000.- según bases administrativasm técnicas y anexos adjuntos.",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Implementación e indumentaria deportiva Promesas Chile - Plan de Proyección y Consolidación al Alto Rendimiento. (Monto Disponible: $1.070.000.-según bases administrativasm técnicas y anexos adjuntos.",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Implementación deportiva general Unidad de Deporte Formativo CEM. (Monto disponible: $866.915.- según bases administrativasm técnicas y anexos adjuntos",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Implementación deportiva general para Unidad de Deporte y Participación Social. (Monto disponible $2.507.335.- según bases administrativasm técnicas y anexos adjuntos",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=935-34-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 3,
+      "nueva": true
+    },
+    {
+      "codigo": "4157-23-LE26",
+      "nombre": "Adq. Vestuario y Calzado alum beneficiarios Proret",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "Ilustre Municipalidad de El Carmen",
+      "unidad": "Educación",
+      "sector": "Municipalidades",
+      "region": "Región del Ñuble",
+      "comuna": "El Carmen",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Las presentes Bases Administrativas Especiales regirán la compra de vestuario escolar y calzado para alumnos beneficiarios de la Subvención Pro Retención de la comuna de El Carmen. Este beneficio se genera para estudiantes que, al momento de su otorgamiento, se encuentren rindiendo 7° u 8° año de Educación Básica en sus establecimientos de origen: Capilla Norte, Navidad, Luis Ortega Oyarce,",
+      "fechaPublicacion": "2026-11-09",
+      "fechaCierre": "2026-11-19T17:41:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes escolares",
+          "descripcion": "Adquisición de vestuario (buzo completo algodón, pantalón casimir, falda escolar, camisa blanca/blusa blanca, polera deportiva, polera piqué para alumnos pro retención del Liceo B.E.P Juvenal Hernández Jaque, Según ficha técnica.",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Zapatillas de hombre",
+          "descripcion": "Calzado Escolar Pares de zapatos desde el 35 al 46 aprox. SEGÚN FICHA TÉCNICA.",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4157-23-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 4,
+      "nueva": true
+    },
+    {
+      "codigo": "3756-49-LE26",
+      "nombre": "ADQUISICIÓN POLERAS INSTITUCIONALES ILUSTRE MUNICIPALIDAD DE PELARCO",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE PELARCO",
+      "unidad": "I MUNICIPALIDAD DE PELARCO",
+      "sector": "Municipalidades",
+      "region": "Región del Maule ",
+      "comuna": "Pelarco",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN POLERAS INSTITUCIONALES, ILUSTRE MUNICIPALIDAD DE PELARCO",
+      "fechaPublicacion": "2026-11-09",
+      "fechaCierre": "2026-11-20T12:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Diseñadores de vestuario",
+          "descripcion": "ADQUISICIÓN 984 POLERAS INSTITUCIONALES",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3756-49-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 5,
+      "nueva": true
+    },
+    {
+      "codigo": "4307-7-LE26",
+      "nombre": "ADQUISICION DE UNIFORMES LICEO C-44 PRO-RETENCION",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "I MUNICIPALIDAD DE ERCILLA",
+      "unidad": "Educación",
+      "sector": "Municipalidades",
+      "region": "Región de la Araucanía ",
+      "comuna": "Ercilla",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICION DE UNIFORMES PARA ALUMNOS DEL LICEO C-44, ALONSO DE ERCILLA Y ZUÑIGA FONDOS PRO-RETENCION 2026",
+      "fechaPublicacion": "2026-11-11",
+      "fechaCierre": "2026-11-20T15:00:00",
+      "montoEstimado": 12418466,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes escolares",
+          "descripcion": "ADQUISICION DE UNIFORMES Y ZAPATILLAS PARA ALUMNOS DEL LICEO C-44, ALONSO DE ERCILLA Y ZUÑIGA, SEGUN DETALLE EN BASES Y ANEXOS ADJUNTOS SP_3556, FONDOS FAEP 2026",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4307-7-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 5,
+      "nueva": true
+    },
+    {
+      "codigo": "4252-20-LE26",
+      "nombre": "ADQUISICION VESTUARIO Y CALZADO PARA FUNCIONARIOS",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE SAN FABIAN",
+      "unidad": "DAF",
+      "sector": "Municipalidades",
+      "region": "Región del Ñuble",
+      "comuna": "San Fabián",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN DE VESTUARIO Y CALZADO PARA LOS FUNCIONARIOS DE LA MUNICIPALIDAD DE SAN FABIAN, SEGÚN BASES ADMINISTRATIVAS Y DOCUMENTOS ADJUNTOS CORRESPONDIENTES.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-20T16:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "VESTUARIO PARA FUNCIONARIOS DE LA MUNICIPALIDAD DE SAN FABIÁN, SEGUN BASES ADMINISTRATIVAS.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Zapatos de hombre",
+          "descripcion": "CALZADO PARA FUNCIONARIOS DE LA MUNICIPALIDAD DE SAN FABIÁN, SEGUN BASES ADMINISTRATIVAS.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4252-20-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 5,
+      "nueva": true
+    },
+    {
+      "codigo": "2432-36-LE26",
+      "nombre": "Sol. 483 - ropa táctica - Seguridad Comunitaria",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD ESTACION CENTRAL",
+      "unidad": "IMUNI_ESTCENTRAL ADQUISICIONES",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Estación Central",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN DE ROPA TACTICA PARA PERSONAL DE SEGURIDAD",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-20T18:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Chalecos antibalas",
+          "descripcion": "ADQUISICIÓN DE ROPA TACTICA PARA PERSONAL DE SEGURIDAD",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2432-36-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 5,
+      "nueva": true
+    },
+    {
+      "codigo": "960841-2-LE26",
+      "nombre": "ADQUISICIÓN DE VESTUARIO INSTITUCIONAL PARA ENTREGAR A ESTUDIANTES COMPLEDUC",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "I MUNICIPALIDAD DE COLLIPULLI",
+      "unidad": "COMPLEJO EDUCACIONAL",
+      "sector": "Municipalidades",
+      "region": "Región de la Araucanía ",
+      "comuna": "Collipulli",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "La finalidad es proporcionar vestuario escolar a los estudiantes del Compleduc que sean beneficiarios de la Subvención Pro-Retención, pertenecientes a las modalidades Científico-Humanista y Técnico-Profesional, como una medida de apoyo social y educativo destinada a favorecer la igualdad de oportunidades, la inclusión, el bienestar estudiantil y la continuidad de sus trayectorias educativas.",
+      "fechaPublicacion": "2026-11-06",
+      "fechaCierre": "2026-11-20T18:00:00",
+      "montoEstimado": 20000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "Vestuario institucional para entregar a estudiantes. (ver Anexo Nº5 Presupuesto detallado Línea 1). Según Bases Administrativas y Técnicas adjuntas.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=960841-2-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 5,
+      "nueva": true
+    },
+    {
+      "codigo": "1233623-48-LE26",
+      "nombre": "VESTUARIO Y CALZADO EE COMUNA DE CALAMA",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "Servicio Local de Educación Pública Licancabur",
+      "unidad": "Servicio Local de Educación Pública Licancabur",
+      "sector": "Educación",
+      "region": "Región de Antofagasta ",
+      "comuna": "Calama",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "SE SOLICITA VESTUARIO Y CALZADO A ESTABLECIMIENTOS EDUCACIONALES CALAMA SEGUN LO INDICADO EN LAS BASES ADMINISTRATIVAS Y TECNICAS. COMPLETAR LOS DOCUMENTOS ADJUNTOS FIRMARLOS Y SUBIRLOS A LA PLATAFORMA",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-23T15:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "PRODUCTO REFERENCIAL, SE DEBE POSTULAR POR EL TOTAL DEL VESTUARIO Y CALZADO CALAMA SEGUN LO INDICADO EN LAS ABASES ADAMINSITRATIVAS Y TECNICAS",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1233623-48-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "4650-21-L126",
+      "nombre": "ADQUISICIÓN DE POLERAS, GORROS Y BOTELLAS PARA VOLUNTARIADO PATRIMONIAL",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "SERVICIO NACIONAL DEL PATRIMONIO CULTURAL",
+      "unidad": "CONSEJO DE MONUMENTOS NACIONALES",
+      "sector": "Otro sector público",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Santiago",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "La Secretaría Técnica del Consejo de Monumentos Nacionales en el marco de la labor de ejecutar el Programa de Voluntariado Patrimonial del Servicio Nacional del Patrimonio Cultural, requiere de entregar a las personas voluntarias elementos distintivos para llevar a cabo tanto las labores de voluntariado como las salidas de capacitación, entre otras.\n\nPor lo anterior esta licitación busca adquirir poleras estampadas, gorros y botellas con la imagen institucional del Voluntariado Patrimonial.",
+      "fechaPublicacion": "2026-11-12",
+      "fechaCierre": "2026-11-23T15:00:00",
+      "montoEstimado": 4400000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Impresión promocional o publicitaria",
+          "descripcion": "Esta licitación busca adquirir poleras estampadas, gorros y botellas con la imagen institucional del Voluntariado Patrimonial del Servicio Nacional del Patrimonio Cultural.",
+          "cantidad": 1,
+          "unidad": "Unidad no definida"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4650-21-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "2672-4-LE26",
+      "nombre": "SUMINISTRO DE PANTALONES MODELO HOMBRE Y MUJER PAR",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE CONCEPCION",
+      "unidad": "DIRECCION ADMINISTRATIVA MUNICIPALIDAD DE CONCEPCIÓN",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Concepción",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "SUMINISTRO DE PANTALONES MODELO HOMBRE Y MUJER PARA FUNCIONARIOS DE LA ILUSTRE MUNICIPALIDAD DE CONCEPCIÓN AÑO 2026: La presente licitación tiene por objeto el suministro de vestuario consistente en pantalones, modelo hombre y modelo mujer, destinado al personal municipal planta y contrata de los estamentos auxiliares, administrativos, técnicos, jefaturas y profesionales hasta grado 9.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-23T15:05:00",
+      "montoEstimado": 30000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Pantalones y short para mujer",
+          "descripcion": "Pantalón de vestir elasticado Mujer tela casimir spandex y Pantalón tela gabardina de vestir estilo clásico formal Mujer.Disponibilidad de colores Negro y Gris.",
+          "cantidad": 400,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Pantalones y short para hombre",
+          "descripcion": "Pantalón de vestir elasticado tela casimir spandex Hombre y Pantalón de vestir estilo  clásico formal Hombre tela gabardina.Disponibilidad de colores Negro y Gris.",
+          "cantidad": 600,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2672-4-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "2354-43-LE26",
+      "nombre": "DISEÑO Y CONFECCCION DE VESTUARIO ESCENOGRAFICO PARA ELENCOS MUNICIPALES",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE PUNTA ARENAS",
+      "unidad": "Dirección de Desarrollo Comunitario",
+      "sector": "Municipalidades",
+      "region": "Región de Magallanes y de la Antártica",
+      "comuna": "Punta Arenas",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "La Ilustre Municipalidad de Punta Arenas, a través de la Dirección de Desarrollo Comunitario, requiere contratar un servicio de diseño y confección de vestuario, para los Elencos de carácter ciudadano de la municipalidad, vestuarios que serán parte de la indumentaria escénica en las distintas presentaciones de estos elencos a la comunidad.",
+      "fechaPublicacion": "2026-11-12",
+      "fechaCierre": "2026-11-23T15:10:00",
+      "montoEstimado": 13750000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Diseñadores de vestuario",
+          "descripcion": "INDUMENTARIA ESCENOGRÁFICA BALLET FOLKLÓRICO MUNICIPAL., CONSTA DE 2 ÍTEMS.",
+          "cantidad": 37,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Diseñadores de vestuario",
+          "descripcion": "INDUMENTARIA ESCENOGRÁFICA CORO MUNICIPAL, CORO VOCES BLANCAS ORQUESTA LATINOAMERICANA, CONSTA DE 7 ÍTEMS.",
+          "cantidad": 156,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Diseñadores de vestuario",
+          "descripcion": "INDUMENTARIA ESCENICA PARA BALLET DEL TEATRO MUNICIPAL, CONSTA DE 11 ÍTEMS.",
+          "cantidad": 27,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2354-43-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "2403-80-LE26",
+      "nombre": "Adquisición de vestimenta y accesorios tácticos",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE PENALOLEN",
+      "unidad": "I.MUNICIPALIDAD DE PEÑALOLEN",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Peñalolén",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Se requiere adquirir por la Municipalidad de Peñalolén vestimenta y accesorios tácticos para funcionarios de la Dirección de Seguridad Humana, según especificaciones técnicas.",
+      "fechaPublicacion": "2026-11-09",
+      "fechaCierre": "2026-11-23T15:30:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes de seguridad",
+          "descripcion": "Adquisición de vestimenta y accesorios tácticos para funcionarios de la Dirección de Seguridad Humana.",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-80-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "2672-5-LE26",
+      "nombre": "SUMINISTRO DE CALZADOPARA FUNCIONARIOS AS DE LA",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE CONCEPCION",
+      "unidad": "DIRECCION ADMINISTRATIVA MUNICIPALIDAD DE CONCEPCIÓN",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Concepción",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "SUMINISTRO DE CALZADOPARA FUNCIONARIOS AS DE LA ILUSTRE MUNICIPALIDAD DE CONCEPCIÓN AÑO 2026\r\nLa presente licitación tiene por objeto el suministro de calzado de trabajo destinado al personal municipal planta y contrata de los estamentos auxiliares, administrativos, técnicos, jefaturas y profesionales hasta grado 9, que se desempeñan en la Ilustre Municipalidad de Concepción, con la finalidad de otorgar una adecuada identificación institucional durante el desarrollo de sus labores.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-23T15:30:00",
+      "montoEstimado": 40000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Zapatos de mujer",
+          "descripcion": "Botín de cuero negro para mujer, marca Gacel, 16 \r\nHoras, Bruno \r\nRossi \to equivalente\r\nMaterial exterior \r\ncuero,   \r\nForro interior transpirable, tales como: cuero, microfibra o malla textil, Suela de goma \ty antideslizante, Taco cuadrado, Punta redonda",
+          "cantidad": 100,
+          "unidad": "Par"
+        },
+        {
+          "producto": "Zapatos de mujer",
+          "descripcion": "Zapatilla urbana de cuero negra para mujer, marca Gacel, 16 Horas, Bruno \r\nRossi \to equivalente.\r\nMaterial exterior cuero,  \r\nForro interior transpirable, tales como: cuero, microfibra o malla textil, Suela de goma \ty antideslizante, Taco tipo cuña, Punta",
+          "cantidad": 100,
+          "unidad": "Par"
+        },
+        {
+          "producto": "Zapatos de hombre",
+          "descripcion": "Botín de cuero negro para hombre, marca Guante, 16 \r\nHoras, \r\nCardinale o equivalente. \r\nMaterial exterior cuero,  \r\nForro interior transpirable, tales como: cuero, microfibra o malla textil, Suela de goma \ty antideslizante, Taco cuadrado, Altura taco mín",
+          "cantidad": 150,
+          "unidad": "Par"
+        },
+        {
+          "producto": "Zapatos de hombre",
+          "descripcion": "Zapato casual hombre de cuero negro, marca guante, \r\n16 horas, \r\nPanama Jack o equivalente.\r\nMaterial exterior cuero, Forro interior transpirable, tales como: cuero, microfibra o malla \r\ntextil, Suela de goma y \r\nantideslizante, Taco plano, Altura taco mí",
+          "cantidad": 170,
+          "unidad": "Par"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2672-5-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "2546-68-LE26",
+      "nombre": "PROPUESTA 101 ADQUISICIÓN POLERAS INSTITUCIONALES",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE PADRE LAS CASAS",
+      "unidad": "MUNICIPALIDAD DE PADRE LAS CASAS",
+      "sector": "Municipalidades",
+      "region": "Región de la Araucanía ",
+      "comuna": "Padre Las Casas",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICIÓN DE POLERAS INSTITUCIONALES PARA FUNCIONARIOS Y FUNCIONARIAS  DE LA MUNICIPALIDAD DE PADRE LAS CASAS, SEGÚN BASES ADJUNTAS",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-23T16:30:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Camisas o blusas de mujer",
+          "descripcion": "POLERAS MUJER MANGA CORTA SEGÚN BASES ADJUNTAS",
+          "cantidad": 114,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Camisetas de caballero",
+          "descripcion": "POLERAS VARÓN MANGA CORTA SEGÚN BASES ADJUNTAS",
+          "cantidad": 132,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Camisas o blusas de mujer",
+          "descripcion": "POLERAS MUJER MANGA LARGA SEGÚN BASES ADJUNTAS",
+          "cantidad": 84,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Camisetas de caballero",
+          "descripcion": "POLERAS VARÓN MANGA LARGA SEGÚN BASES ADJUNTAS",
+          "cantidad": 126,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2546-68-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 8,
+      "nueva": true
+    },
+    {
+      "codigo": "4314-46-LE26",
+      "nombre": "ADQUISICION DE CALZADO FORMAL PARA FUNCIONARIOS MUNICPALIDAD DE CUREPTO",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "Ilustre Municipalidad de Curepto",
+      "unidad": "DEPTO. ADM. Y FINANZAS",
+      "sector": "Municipalidades",
+      "region": "Región del Maule ",
+      "comuna": "Curepto",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "ADQUISICION DE CALZADO FORMAL PARA FUNCIONARIOS MUNICPALIDAD DE CUREPTO",
+      "fechaPublicacion": "2026-11-13",
+      "fechaCierre": "2026-11-24T12:00:00",
+      "montoEstimado": 8500000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Zapatos de hombre",
+          "descripcion": "CALZADO FORMAL PARA FUNCIONARIOS MUNICPALIDAD",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4314-46-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 9,
+      "nueva": true
+    },
+    {
+      "codigo": "1230848-75-LE26",
+      "nombre": "ADQUISICIÓN DE UNIFORMES CATEGORIA F",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "Corporación Municipal de Desarrollo Social de Calama",
+      "unidad": "Corporación Municipal de Desarrollo Social de Cala",
+      "sector": "Municipalidades",
+      "region": "Región de Antofagasta ",
+      "comuna": "Calama",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "El presente proceso tiene por objeto la adquisición de ropa de trabajo, calzado y elementos de protección personal para COMDES Salud Calama, conforme a las líneas de adjudicación que se indican.",
+      "fechaPublicacion": "2026-11-03",
+      "fechaCierre": "2026-11-24T15:00:00",
+      "montoEstimado": 45000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Remitase al numeral 1.2 de las bases administrativas especiales.\r\nLÍNEA N°1 ADQUISICIÓN DE UNIFORMES",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Zapatillas de hombre",
+          "descripcion": "Remitase al numeral 1.2 de las bases administrativas especiales.\r\nLÍNEA N°2 ADQUISICIÓN DE CALZADOS DE SEGURIDAD Y OCUPACIONALES",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Equipo para protección",
+          "descripcion": "Remitase al numeral 1.2 de las bases administrativas especiales.\r\nLÍNEA N°3 ADQUISICIÓN DE EQUIPO DE PROTECCIÓN PERSONAL",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1230848-75-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 9,
+      "nueva": true
+    },
+    {
+      "codigo": "2446-341-LE26",
+      "nombre": "INDUMENTARIA DEPORTIVA CAMPEONES PARA COQUIMBO",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE COQUIMBO",
+      "unidad": "IMUNI_COQUIMBO",
+      "sector": "Municipalidades",
+      "region": "Región de Coquimbo ",
+      "comuna": "Coquimbo",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Se requiere licitar la adquisición de indumentaria deportiva programa campeones para Coquimbo, con el fin de Proveer indumentaria deportiva técnica e institucional a participantes y talleristas del Programa Campeones para Coquimbo, con el fin de estandarizar su presentación, fortalecer el sentido de pertenencia y mejorar la imagen del programa ante la comunidad.\r\nSe deja expresa constancia que los oferentes deberán ofertar la totalidad de productos requeridos. El incumplimiento de esta disposición facultará al municipio para declarar inadmisibles a dichas ofertas.\r\n\r\nLa Municipalidad de Coquim",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-24T15:00:00",
+      "montoEstimado": 20000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla 8",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla 12",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla 16",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla S",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla M",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla L",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto de básquetbol (camiseta + short) talla XL",
+          "cantidad": 15,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla 8",
+          "cantidad": 80,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla 12",
+          "cantidad": 70,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla 16",
+          "cantidad": 70,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla S",
+          "cantidad": 60,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla M",
+          "cantidad": 60,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla L",
+          "cantidad": 60,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Polera blanca dry-fit manga corta entrenamiento talla XL",
+          "cantidad": 60,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Femenino (5 piezas) talla S",
+          "cantidad": 2,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Masculino (5 piezas) talla S",
+          "cantidad": 3,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Femenino (5 piezas) talla M",
+          "cantidad": 2,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Masculino (5 piezas) talla M",
+          "cantidad": 3,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Femenino (5 piezas) talla L",
+          "cantidad": 2,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Masculino (5 piezas) talla L",
+          "cantidad": 3,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Femenino (5 piezas) talla XL",
+          "cantidad": 3,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto deportivo Masculino (5 piezas) talla XL",
+          "cantidad": 3,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla 8 (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla 12 (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla 16 (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla S (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla M (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla L (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol salón (camiseta + short) talla XL (Incluye el conjunto diferenciado para el Líbero; 19+1)",
+          "cantidad": 20,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla 8",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla 12",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla 16",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla S",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla M",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla L",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Tienda de deporte",
+          "descripcion": "Conjunto voleibol playa (camiseta + short) talla XL",
+          "cantidad": 12,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2446-341-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 9,
+      "nueva": true
+    },
+    {
+      "codigo": "1469-369-L126",
+      "nombre": "Provisión y bordado de Polerones Cohorte 2027 – Facultad de Odontología, Universidad de Talca",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "UNIVERSIDAD DE TALCA",
+      "unidad": "Universidad de Talca",
+      "sector": "Educación",
+      "region": "Región del Maule ",
+      "comuna": "Curicó",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "La Facultad de Odontología de la Universidad de Talca requiere contratar el servicio de provisión y bordado de polerones para la Cohorte 2027, con el propósito de disponer de prendas personalizadas que representen a los estudiantes de la carrera, fortaleciendo su identidad y sentido de pertenencia con la institución.",
+      "fechaPublicacion": "2026-11-13",
+      "fechaCierre": "2026-11-25T10:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Prendas de deporte y buzos de hombre",
+          "descripcion": "SERVICIO DE PROVISION Y BORDADO DE POLERONES",
+          "cantidad": 200,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1469-369-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 10,
+      "nueva": true
+    },
+    {
+      "codigo": "1428670-18-LE26",
+      "nombre": "VESTUARIO INSTITUCIONAL DE VERANO 2026–2027",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "ASOCIACION METROPOLITANA DE MUNICIPALIDADES DE SANTIAGO SUR PARA LA GE",
+      "unidad": "ASOCIACION METROPOLITANA DE MUNICIPALIDADES DE SANTIAGO SUR PARA LA GE",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "La Asociación MSUR requiere adquirir y recibir vestuario institucional para la temporada de verano 2026–2027, destinado a su personal operativo, de acuerdo con las Bases Técnicas que forman parte integrante de la licitación.\r\nLa adquisición comprende 1.200 poleras, 1.200 pantalones tipo buzo deportivo y 600 gorros legionarios. Se incluye confección a medida de tallas especiales dentro de las cantidades indicadas y sin recargo respecto del precio unitario adjudicado.",
+      "fechaPublicacion": "2026-11-06",
+      "fechaCierre": "2026-11-25T15:00:00",
+      "montoEstimado": 50000000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Ropa reflectante o accesorios",
+          "descripcion": "La Asociación MSUR requiere adquirir y recibir vestuario institucional para la temporada de verano 2026–2027, destinado a su personal operativo",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1428670-18-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 10,
+      "nueva": true
+    },
+    {
+      "codigo": "2705-68-LP26",
+      "nombre": "ADQUISICIÓN Y CONFECCIÓN DE UNIFORMES INSTITUCIONALES FEMENINOS PARA LA UNIVERSIDAD DEL BÍO-BÍO SC 4436",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "UNIVERSIDAD DEL BIO BIO",
+      "unidad": "Universidad del Bío-Bío - Campus Chillán",
+      "sector": "Educación",
+      "region": "Región del Ñuble",
+      "comuna": "Chillán",
+      "tipo": "LP",
+      "tipoDescripcion": "1.000 a 2.000 UTM",
+      "descripcion": "ADQUISICIÓN Y CONFECCIÓN DE UNIFORMES INSTITUCIONALES FEMENINOS PARA LA UNIVERSIDAD DEL BÍO-BÍO, SC 4436",
+      "fechaPublicacion": "2026-11-05",
+      "fechaCierre": "2026-11-25T19:59:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "ADQUISICIÓN Y CONFECCIÓN DE UNIFORMES INSTITUCIONALES FEMENINOS",
+          "cantidad": 1,
+          "unidad": "Pack"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2705-68-LP26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 10,
+      "nueva": true
+    },
+    {
+      "codigo": "1214102-60-LP26",
+      "nombre": "ADQUISICIÓN DE UNIFORMES INSTITUCIONALES DIRSAL",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "CORP MUNICIPAL DE DESARROLLO SOCIAL DE PUDAHUEL",
+      "unidad": "Adquisiciones",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Estación Central",
+      "tipo": "LP",
+      "tipoDescripcion": "1.000 a 2.000 UTM",
+      "descripcion": "La presente licitación pública tiene por objetivo la adquisición de uniformes institucionales destinados a las y los funcionarios de la Dirección de Salud, dependientes de la Corporación Municipal de Desarrollo Social de Pudahuel.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-11-30T15:00:00",
+      "montoEstimado": 93500000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes varios",
+          "descripcion": "LINEA 1 (PANTALON CLINICO Y TOP CLINICO)",
+          "cantidad": 2580,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes varios",
+          "descripcion": "LINEA 2 (POLAR TERMICO Y CHAQUETA TERMICA)",
+          "cantidad": 1290,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1214102-60-LP26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 15,
+      "nueva": true
+    },
+    {
+      "codigo": "2408-217-LP26",
+      "nombre": "ADQUISICIÓN VESTUARIO PARA FUNCIONARIOS DE LA MUNICIPALIDAD DE LOS ÁNGELES TEMPORADA 2027.",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE LOS ANGELES",
+      "unidad": "IMUNI_LOSANGELES ADQUISICIONES",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Los Angeles",
+      "tipo": "LP",
+      "tipoDescripcion": "1.000 a 2.000 UTM",
+      "descripcion": "ADQUISICIÓN VESTUARIO PARA FUNCIONARIOS DE LA MUNICIPALIDAD DE LOS ÁNGELES TEMPORADA 2027.",
+      "fechaPublicacion": "2026-11-10",
+      "fechaCierre": "2026-12-03T09:00:00",
+      "montoEstimado": 190085074,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes varios",
+          "descripcion": "Se requiere la ADQUISICIÓN VESTUARIO PARA FUNCIONARIOS DE LA MUNICIPALIDAD DE LOS ÁNGELES TEMPORADA 2027, de acuerdo a lo estipulado en bases adjuntas.",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2408-217-LP26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 17,
+      "nueva": true
+    },
+    {
+      "codigo": "2490-112-LR26",
+      "nombre": "“ADQUISICIÓN DE TARJETAS TIPO GIFTCARD DE PANTALONES Y CALZADO PARA FUNCIONARIOS Y FUNCIONARIAS DE LA MUNICIPALIDAD DE PROVIDENCIA AÑO 2026 - 2027”. ",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "I MUNICIPALIDAD DE PROVIDENCIA",
+      "unidad": "Dirección de Secpla",
+      "sector": "Municipalidades",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Providencia",
+      "tipo": "LR",
+      "tipoDescripcion": "Más de 5.000 UTM",
+      "descripcion": "La Municipalidad de Providencia requiere contratar la “ADQUISICIÓN DE TARJETAS TIPO GIFTCARD DE PANTALONES Y CALZADO PARA FUNCIONARIOS Y FUNCIONARIAS DE LA MUNICIPALIDAD DE PROVIDENCIA AÑO 2026-2027”, para las temporadas primavera-verano y otoño-invierno correspondientes al período 2026 y 2027, para ser entregadas a las funcionarias y funcionarios de la Municipalidad de Providencia, como complemento de su uniforme institucional.\r\n\r\n",
+      "fechaPublicacion": "2026-11-02",
+      "fechaCierre": "2026-12-03T15:00:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vales",
+          "descripcion": "VALOR TOTAL EXENTO DE IMPUESTO, PARA LA ADQUSICIÓN DE TARJETAS TIPO GIFTCARD DE PANTALONES LÍNEA N°1, CORRESPONDIENTE A $229.500.000.-",
+          "cantidad": 1,
+          "unidad": "Global"
+        },
+        {
+          "producto": "Vales",
+          "descripcion": "VALOR TOTAL EXENTO DE IMPUESTO, PARA LA ADQUSICIÓN DE TARJETAS TIPO GIFTCARD DE CALZADO LÍNEA N°2, CORRESPONDIENTE A $229.500.000.-",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2490-112-LR26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 18,
+      "nueva": true
+    },
+    {
+      "codigo": "592-37-LE26",
+      "nombre": "Confección de Set de Uniformes Mineduc 2027-2028",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA",
+      "unidad": "Ministerio de Educación - Unidad Licitaciones",
+      "sector": "Educación",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Alhué",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "Contar con el servicio de confección de uniformes para funcionarias de la Subsecretaría de Educación, correspondientes a los años 2027 y 2028",
+      "fechaPublicacion": "2026-11-06",
+      "fechaCierre": "2026-12-14T20:00:00",
+      "montoEstimado": 21060000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Valor Unitario Neto de 27 set de Uniformes Temporada Otoño-Invierno 2027",
+          "cantidad": 27,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Uniformes corporativos",
+          "descripcion": "Valor Unitario Neto de 27 set de Uniformes Temporada Primavera-Verano 2028",
+          "cantidad": 27,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=592-37-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 29,
+      "nueva": true
+    }
+  ]
+}

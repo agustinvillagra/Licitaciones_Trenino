@@ -1,0 +1,15 @@
+{
+  "name": "licitaciones-trenino",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Licitaciones públicas de vestuario escolar y corporativo que le interesan a Trenino",
+  "scripts": {
+    "actualizar": "node scripts/actualizar.mjs",
+    "correo": "node scripts/enviar-correo.mjs",
+    "dev": "node scripts/servidor.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
