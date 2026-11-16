@@ -1,11 +1,11 @@
 {
-  "actualizado": "2026-11-16T15:33:57.765Z",
+  "actualizado": "2026-11-16T16:26:36.010Z",
   "versionEsquema": 3,
-  "totalActivasChileCompra": 5454,
+  "totalActivasChileCompra": 5490,
   "resumen": {
-    "escolar": 7,
+    "escolar": 8,
     "corporativo": 35,
-    "nuevasHoy": 42
+    "nuevasHoy": 43
   },
   "licitaciones": [
     {
@@ -1678,6 +1678,38 @@
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2705-68-LP26",
       "vistaPrimeraVez": "2026-11-16",
       "diasParaCierre": 10,
+      "nueva": true
+    },
+    {
+      "codigo": "4034-23-LE26",
+      "nombre": "UNIFORMES ESCOLARES PARA LICEO B-56",
+      "linea": "escolar",
+      "motivo": "El texto indica que la prenda es para alumnos",
+      "organismo": "I MUNICIPALIDAD DE CANETE",
+      "unidad": "Daem",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Cañete",
+      "tipo": "LE",
+      "tipoDescripcion": "100 a 1.000 UTM",
+      "descripcion": "El Departamento de Administración de Educación Municipal de Cañete DAEM llama a Licitación Pública a través del Portal Mercado Público, para la adquisición de “UNIFORMES PARA ESTUDIANTES DE LICEO JOSÉ DE LA CRUZ MIRANDA CORREA”, que tiene como finalidad favorecer la equidad, la permanencia escolar y el sentido de pertenencia al establecimiento. \r\nLas especificaciones de estos requerimientos se detallan en Bases Administrativas y Especificaciones Técnicas de la presente licitación",
+      "fechaPublicacion": "2026-11-16",
+      "fechaCierre": "2026-11-26T16:00:00",
+      "fechaPreguntas": "2026-11-23T12:00:00",
+      "fechaApertura": "2026-11-26T16:05:00",
+      "montoEstimado": null,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Uniformes escolares",
+          "descripcion": "UNIFORMES ESCOLARES PARA ESTUDIANTES DE LICEO JOSÉ DE LA CRUZ MIRANDA CORREA",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4034-23-LE26",
+      "vistaPrimeraVez": "2026-11-16",
+      "diasParaCierre": 11,
       "nueva": true
     },
     {

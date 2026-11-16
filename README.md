@@ -162,7 +162,10 @@ repositorio a su cuenta.
 
 ```bash
 cp .env.example .env        # y completar el ticket
-export $(grep -v '^#' .env | xargs)
+
+# Cargar el .env. Conviene este set -a y no un export con xargs:
+# CORREO_ORIGEN lleva espacios y xargs lo parte en pedazos.
+set -a; source .env; set +a
 
 npm run actualizar          # consulta la API y regenera el JSON
 npm run dev                 # sirve la página en http://localhost:3000
