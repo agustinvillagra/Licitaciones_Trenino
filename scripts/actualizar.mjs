@@ -144,10 +144,18 @@ async function main() {
     if (r.linea !== null) registros.push(r);
   });
 
-  // Las que ya conocíamos siguen vigentes mientras aparezcan en activas.
+  // Las que ya conocíamos siguen vigentes mientras aparezcan en activas. El
+  // cierre se refresca por si el comprador lo movió, pero pasando por aISO:
+  // el listado lo entrega sin zona horaria y guardarlo crudo pisaba la fecha
+  // ya normalizada.
   for (const l of candidatas) {
     const anterior = conocidas.get(l.CodigoExterno);
-    if (anterior) registros.push({ ...anterior, fechaCierre: l.FechaCierre ?? anterior.fechaCierre });
+    if (anterior) {
+      registros.push({
+        ...anterior,
+        fechaCierre: aISO(l.FechaCierre) ?? anterior.fechaCierre,
+      });
+    }
   }
 
   const ahora = new Date();
