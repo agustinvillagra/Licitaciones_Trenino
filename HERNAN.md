@@ -109,7 +109,7 @@ En la pestaña **Variables**, con *New repository variable*:
    sitio es estático y que la carpeta a publicar es `public/`. Si te pregunta
    por *Framework Preset*, déjalo en **Other**; el *Root Directory* se queda en
    la raíz. No hay comando de build.
-4. **Deploy.** Te va a dar una URL tipo `https://licitaciones-trenino.vercel.app`.
+4. **Deploy.** Te va a dar una URL tipo `https://licitacionestrenino.vercel.app`.
 5. Vuelve a GitHub y pon esa URL en la variable `SITIO_URL`. Es la que usa el
    botón del correo.
 
