@@ -1,7 +1,39 @@
 {
-  "actualizado": "2026-11-17T19:45:17.034Z",
-  "versionEsquema": 3,
+  "actualizado": "2026-11-17T20:02:25.032Z",
+  "versionEsquema": 4,
   "licitaciones": [
+    {
+      "codigo": "1316747-34-L126",
+      "nombre": "Confección de vestuario ballet El Principito",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "CORPORACION CULTURAL MUNICIPAL DE LOS ANGELES",
+      "unidad": "Departamento de Administración",
+      "sector": "Municipalidades",
+      "region": "Región del Biobío ",
+      "comuna": "Los Angeles",
+      "tipo": "L1",
+      "tipoDescripcion": "Menos de 100 UTM",
+      "descripcion": "La Corporación Cultural Municipal de Los Ángeles, a través de su Escuela de Ballet y Danza, requiere contratar la confección del vestuario ítems 1 al 15 y la reparación de vestuario existente ítem 16 para la obra de ballet El Principito, Gala de egreso de la Escuela. Servicio único, evaluado y adjudicado en su totalidad a un solo oferente, conforme a las bases y Anexo N°3.",
+      "fechaPublicacion": "2026-11-09",
+      "fechaCierre": "2026-11-17T17:00:00-03:00",
+      "fechaPreguntas": "2026-11-12T17:00:00-03:00",
+      "fechaApertura": "2026-11-17T17:30:00-03:00",
+      "montoEstimado": 1800000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Vestuario",
+          "descripcion": "Confección de vestuario (ítems 1 al 15) y reparación de vestuario existente (ítem 16) para la obra de ballet \"El Principito\", Gala de egreso de la Escuela de Ballet y Danza. Servicio único, adjudicado a un solo oferente. Detalle en bases.",
+          "cantidad": 1,
+          "unidad": "Global"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1316747-34-L126",
+      "vistaPrimeraVez": "2026-11-16",
+      "nueva": false,
+      "archivadaEl": "2026-11-17"
+    },
     {
       "codigo": "3935-126-LE26",
       "nombre": "VESTUARIO PARA ESTUDIANTES LICEO FREIRE",

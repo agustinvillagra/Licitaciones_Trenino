@@ -24,6 +24,7 @@
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import nodemailer from 'nodemailer';
+import { formatear } from '../lib/fechas.mjs';
 
 const RAIZ = resolve(import.meta.dirname, '..');
 const porGmail = () => Boolean(process.env.GMAIL_USUARIO && process.env.GMAIL_CLAVE_APP);
@@ -70,14 +71,9 @@ const pesos = (n) =>
 const escapar = (s) =>
   String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
-function fecha(iso) {
-  const d = new Date(iso);
-  return Number.isNaN(d.getTime())
-    ? '—'
-    : d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short' }) +
-        ' ' +
-        d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
-}
+// Se delega en lib/fechas.mjs para que el correo muestre hora de Chile
+// aunque el envío salga desde un servidor en UTC.
+const fecha = (iso) => formatear(iso);
 
 function tarjeta(l) {
   const monto = pesos(l.montoEstimado);

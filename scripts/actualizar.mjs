@@ -14,7 +14,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { licitacionesActivas, detalle, enlacePublico } from '../lib/api.mjs';
-import { clasificar, sector, diasParaCierre, TIPOS } from '../lib/filtros.mjs';
+import { clasificar, sector, TIPOS } from '../lib/filtros.mjs';
+import { aISO } from '../lib/fechas.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ARCHIVO = resolve(RAIZ, 'public/data/licitaciones.json');
@@ -27,7 +28,7 @@ const HILOS = 3; // más que esto y la API devuelve 429
 // Subir este número cuando se agreguen campos al registro: obliga a volver a
 // bajar el detalle de todas, en vez de reusar los registros viejos sin el
 // campo nuevo.
-const VERSION_ESQUEMA = 3;
+const VERSION_ESQUEMA = 4;
 
 /** Corre fn sobre cada elemento con como máximo `limite` en vuelo. */
 async function enParalelo(elementos, limite, fn) {
@@ -52,7 +53,7 @@ async function leerJson(ruta, porDefecto) {
 }
 
 /** Arma el registro que se guarda, mezclando el listado con el detalle. */
-function construir(base, det, hoy) {
+function construir(base, det, vistaPrimeraVez) {
   const comprador = det?.Comprador ?? {};
   const organismo = comprador.NombreOrganismo ?? '';
   const { linea, motivo } = clasificar(base.Nombre, organismo);
@@ -76,16 +77,18 @@ function construir(base, det, hoy) {
     tipoDescripcion: TIPOS[det?.Tipo] ?? '',
     descripcion: (det?.Descripcion ?? '').slice(0, 600),
     fechaPublicacion: (det?.Fechas?.FechaPublicacion ?? '').slice(0, 10),
-    fechaCierre: base.FechaCierre ?? det?.Fechas?.FechaCierre ?? null,
+    // Las fechas de la API vienen sin zona horaria; aISO las fija en hora de
+    // Chile para que se lean igual en cualquier máquina. Ver lib/fechas.mjs.
+    fechaCierre: aISO(base.FechaCierre ?? det?.Fechas?.FechaCierre),
     // Último momento para hacerle preguntas al comprador. Si ya pasó, se
     // oferta sin poder pedir aclaraciones: conviene verlo antes de decidir.
-    fechaPreguntas: det?.Fechas?.FechaFinal ?? null,
-    fechaApertura: det?.Fechas?.FechaActoAperturaTecnica ?? null,
+    fechaPreguntas: aISO(det?.Fechas?.FechaFinal),
+    fechaApertura: aISO(det?.Fechas?.FechaActoAperturaTecnica),
     montoEstimado: det?.MontoEstimado ?? null,
     moneda: det?.Moneda ?? 'CLP',
     items,
     enlace: enlacePublico(base.CodigoExterno),
-    vistaPrimeraVez: hoy,
+    vistaPrimeraVez,
   };
 }
 
@@ -94,12 +97,25 @@ async function main() {
   const hoy = new Date().toISOString().slice(0, 10);
 
   const previo = await leerJson(ARCHIVO, { licitaciones: [] });
+  // Se lee acá y no más abajo porque vistaAntes lo necesita.
+  const hist = await leerJson(HISTORIAL, { licitaciones: [] });
   const mismoEsquema = previo.versionEsquema === VERSION_ESQUEMA;
   if (!mismoEsquema && previo.licitaciones?.length) {
     console.log('El esquema cambió: se vuelve a bajar el detalle de todas.');
   }
   const conocidas = new Map(
     mismoEsquema ? (previo.licitaciones ?? []).map((l) => [l.codigo, l]) : []
+  );
+
+  // Cuándo apareció cada licitación por primera vez. Se guarda aparte de
+  // `conocidas` a propósito: cuando sube VERSION_ESQUEMA hay que volver a
+  // bajar el detalle, pero la fecha en que la vimos no cambió. Sin esto, un
+  // cambio de esquema las marcaba todas como nuevas de golpe y el correo del
+  // día siguiente habría avisado de las 40 como si acabaran de salir.
+  const vistaAntes = new Map(
+    [...(previo.licitaciones ?? []), ...(hist.licitaciones ?? [])]
+      .filter((l) => l.codigo && l.vistaPrimeraVez)
+      .map((l) => [l.codigo, l.vistaPrimeraVez])
   );
 
   console.log('Consultando licitaciones activas…');
@@ -123,7 +139,7 @@ async function main() {
 
   const registros = [];
   nuevas.forEach((l, i) => {
-    const r = construir(l, detalles[i], hoy);
+    const r = construir(l, detalles[i], vistaAntes.get(l.CodigoExterno) ?? hoy);
     // El detalle puede revelar que el organismo la descarta (salud, academia).
     if (r.linea !== null) registros.push(r);
   });
@@ -136,7 +152,9 @@ async function main() {
 
   const ahora = new Date();
   for (const r of registros) {
-    r.diasParaCierre = diasParaCierre(r.fechaCierre, ahora);
+    // Cuánto falta para el cierre no se guarda: lo calcula la página al
+    // pintar cada tarjeta. Guardado envejecía, y un "queda 1 día" generado en
+    // la mañana seguía diciendo lo mismo al día siguiente.
     r.nueva = r.vistaPrimeraVez === hoy;
   }
   registros.sort((a, b) => new Date(a.fechaCierre ?? 0) - new Date(b.fechaCierre ?? 0));
@@ -158,7 +176,6 @@ async function main() {
 
   // ---- historial: lo que estaba activo y ya no aparece ----
   const vigentes = new Set(registros.map((r) => r.codigo));
-  const hist = await leerJson(HISTORIAL, { licitaciones: [] });
   const yaArchivadas = new Map(hist.licitaciones.map((l) => [l.codigo, l]));
 
   let cerradasAhora = 0;
@@ -167,7 +184,6 @@ async function main() {
     yaArchivadas.set(anterior.codigo, {
       ...anterior,
       nueva: false,
-      diasParaCierre: null,
       archivadaEl: hoy,
     });
     cerradasAhora++;

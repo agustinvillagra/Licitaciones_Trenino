@@ -1,45 +1,13 @@
 {
-  "actualizado": "2026-11-17T19:45:17.034Z",
-  "versionEsquema": 3,
-  "totalActivasChileCompra": 4884,
+  "actualizado": "2026-11-17T20:02:25.032Z",
+  "versionEsquema": 4,
+  "totalActivasChileCompra": 4885,
   "resumen": {
     "escolar": 9,
-    "corporativo": 31,
+    "corporativo": 30,
     "nuevasHoy": 11
   },
   "licitaciones": [
-    {
-      "codigo": "1316747-34-L126",
-      "nombre": "Confección de vestuario ballet El Principito",
-      "linea": "corporativo",
-      "motivo": "Vestuario corporativo o institucional",
-      "organismo": "CORPORACION CULTURAL MUNICIPAL DE LOS ANGELES",
-      "unidad": "Departamento de Administración",
-      "sector": "Municipalidades",
-      "region": "Región del Biobío ",
-      "comuna": "Los Angeles",
-      "tipo": "L1",
-      "tipoDescripcion": "Menos de 100 UTM",
-      "descripcion": "La Corporación Cultural Municipal de Los Ángeles, a través de su Escuela de Ballet y Danza, requiere contratar la confección del vestuario ítems 1 al 15 y la reparación de vestuario existente ítem 16 para la obra de ballet El Principito, Gala de egreso de la Escuela. Servicio único, evaluado y adjudicado en su totalidad a un solo oferente, conforme a las bases y Anexo N°3.",
-      "fechaPublicacion": "2026-11-09",
-      "fechaCierre": "2026-11-17T17:00:00",
-      "fechaPreguntas": "2026-11-12T17:00:00",
-      "fechaApertura": "2026-11-17T17:30:00",
-      "montoEstimado": 1800000,
-      "moneda": "CLP",
-      "items": [
-        {
-          "producto": "Vestuario",
-          "descripcion": "Confección de vestuario (ítems 1 al 15) y reparación de vestuario existente (ítem 16) para la obra de ballet \"El Principito\", Gala de egreso de la Escuela de Ballet y Danza. Servicio único, adjudicado a un solo oferente. Detalle en bases.",
-          "cantidad": 1,
-          "unidad": "Global"
-        }
-      ],
-      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1316747-34-L126",
-      "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 1,
-      "nueva": false
-    },
     {
       "codigo": "3017-74-L126",
       "nombre": "POLERAS Y JOCKET PARA HPV LOTA",
@@ -55,8 +23,8 @@
       "descripcion": "POLERAS Y JOCKET PARA HPV, LOTA, SEGUN FOLIO ADJUNTOS CON ESTAMPADO, SE GENERARAN 3 ORDENES DE COMPRAS PARA HPV I, HP II Y HPV III, CADA UNO CON SUS MONTOS ASIGNADOS",
       "fechaPublicacion": "2026-11-09",
       "fechaCierre": "2026-11-18T09:20:00",
-      "fechaPreguntas": "2026-11-12T15:20:00",
-      "fechaApertura": "2026-11-18T09:21:00",
+      "fechaPreguntas": "2026-11-12T15:20:00-03:00",
+      "fechaApertura": "2026-11-18T09:21:00-03:00",
       "montoEstimado": 345000,
       "moneda": "CLP",
       "items": [
@@ -75,7 +43,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3017-74-L126",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 1,
       "nueva": false
     },
     {
@@ -93,8 +60,8 @@
       "descripcion": "La presente licitación pública tiene por objetivo general adquirir ropa corporativa para los funcionarios  de Calidad Planta y Contrata tales como ,poleras , chaquetas  etc.",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-18T16:00:00",
-      "fechaPreguntas": "2026-11-13T10:25:00",
-      "fechaApertura": "2026-11-18T16:01:00",
+      "fechaPreguntas": "2026-11-13T10:25:00-03:00",
+      "fechaApertura": "2026-11-18T16:01:00-03:00",
       "montoEstimado": 12000000,
       "moneda": "CLP",
       "items": [
@@ -107,7 +74,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3678-28-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 1,
       "nueva": false
     },
     {
@@ -125,8 +91,8 @@
       "descripcion": "ADQUISICIÓN DE CHAQUETA TIPO SOFTSHELL MANGA LARGA PARA DAMA Y VARÓN COLOR NEGRA, Y POLERAS TIPO PIQUÉ, MANGA CORTA DAMAVARÓN",
       "fechaPublicacion": "2026-11-06",
       "fechaCierre": "2026-11-18T18:00:00",
-      "fechaPreguntas": "2026-11-10T17:00:00",
-      "fechaApertura": "2026-11-17T16:14:00",
+      "fechaPreguntas": "2026-11-10T17:00:00-03:00",
+      "fechaApertura": "2026-11-18T18:01:00-03:00",
       "montoEstimado": 12240000,
       "moneda": "CLP",
       "items": [
@@ -145,7 +111,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3935-125-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 2,
       "nueva": false
     },
     {
@@ -163,8 +128,8 @@
       "descripcion": "COMPRA DE IMPLEMENTOS E INDUMENTARIA INSTITUTO NACIONAL DE DEPORTES REGIÓN DE MAGALLANES.",
       "fechaPublicacion": "2026-11-06",
       "fechaCierre": "2026-11-19T09:00:00",
-      "fechaPreguntas": "2026-11-11T20:00:00",
-      "fechaApertura": "2026-11-19T09:05:00",
+      "fechaPreguntas": "2026-11-11T20:00:00-03:00",
+      "fechaApertura": "2026-11-19T09:05:00-03:00",
       "montoEstimado": 13619250,
       "moneda": "CLP",
       "items": [
@@ -201,7 +166,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=935-34-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 2,
       "nueva": false
     },
     {
@@ -219,8 +183,8 @@
       "descripcion": "Las presentes Bases Administrativas Especiales regirán la compra de vestuario escolar y calzado para alumnos beneficiarios de la Subvención Pro Retención de la comuna de El Carmen. Este beneficio se genera para estudiantes que, al momento de su otorgamiento, se encuentren rindiendo 7° u 8° año de Educación Básica en sus establecimientos de origen: Capilla Norte, Navidad, Luis Ortega Oyarce,",
       "fechaPublicacion": "2026-11-09",
       "fechaCierre": "2026-11-19T17:41:00",
-      "fechaPreguntas": "2026-11-12T19:35:00",
-      "fechaApertura": "2026-11-19T17:42:00",
+      "fechaPreguntas": "2026-11-12T19:35:00-03:00",
+      "fechaApertura": "2026-11-19T17:42:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -239,7 +203,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4157-23-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 3,
       "nueva": false
     },
     {
@@ -257,8 +220,8 @@
       "descripcion": "ADQUISICIÓN POLERAS INSTITUCIONALES, ILUSTRE MUNICIPALIDAD DE PELARCO",
       "fechaPublicacion": "2026-11-09",
       "fechaCierre": "2026-11-20T12:00:00",
-      "fechaPreguntas": "2026-11-16T08:30:00",
-      "fechaApertura": "2026-11-20T12:01:00",
+      "fechaPreguntas": "2026-11-16T08:30:00-03:00",
+      "fechaApertura": "2026-11-20T12:01:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -271,7 +234,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3756-49-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 3,
       "nueva": false
     },
     {
@@ -289,8 +251,8 @@
       "descripcion": "ADQUISICION DE UNIFORMES PARA ALUMNOS DEL LICEO C-44, ALONSO DE ERCILLA Y ZUÑIGA FONDOS PRO-RETENCION 2026",
       "fechaPublicacion": "2026-11-11",
       "fechaCierre": "2026-11-20T15:00:00",
-      "fechaPreguntas": "2026-11-16T10:00:00",
-      "fechaApertura": "2026-11-20T15:01:00",
+      "fechaPreguntas": "2026-11-16T10:00:00-03:00",
+      "fechaApertura": "2026-11-20T15:01:00-03:00",
       "montoEstimado": 12418466,
       "moneda": "CLP",
       "items": [
@@ -303,7 +265,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4307-7-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 3,
       "nueva": false
     },
     {
@@ -321,8 +282,8 @@
       "descripcion": "ADQUISICIÓN DE VESTUARIO Y CALZADO PARA LOS FUNCIONARIOS DE LA MUNICIPALIDAD DE SAN FABIAN, SEGÚN BASES ADMINISTRATIVAS Y DOCUMENTOS ADJUNTOS CORRESPONDIENTES.",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-20T16:00:00",
-      "fechaPreguntas": "2026-11-12T16:01:00",
-      "fechaApertura": "2026-11-23T08:00:00",
+      "fechaPreguntas": "2026-11-12T16:01:00-03:00",
+      "fechaApertura": "2026-11-23T08:00:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -341,7 +302,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4252-20-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 3,
       "nueva": false
     },
     {
@@ -359,8 +319,8 @@
       "descripcion": "ADQUISICIÓN DE ROPA TACTICA PARA PERSONAL DE SEGURIDAD",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-20T18:00:00",
-      "fechaPreguntas": "2026-11-13T11:02:00",
-      "fechaApertura": "2026-11-20T18:01:00",
+      "fechaPreguntas": "2026-11-13T11:02:00-03:00",
+      "fechaApertura": "2026-11-20T18:01:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -373,7 +333,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2432-36-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 4,
       "nueva": false
     },
     {
@@ -391,8 +350,8 @@
       "descripcion": "La finalidad es proporcionar vestuario escolar a los estudiantes del Compleduc que sean beneficiarios de la Subvención Pro-Retención, pertenecientes a las modalidades Científico-Humanista y Técnico-Profesional, como una medida de apoyo social y educativo destinada a favorecer la igualdad de oportunidades, la inclusión, el bienestar estudiantil y la continuidad de sus trayectorias educativas.",
       "fechaPublicacion": "2026-11-06",
       "fechaCierre": "2026-11-20T18:00:00",
-      "fechaPreguntas": "2026-11-10T18:00:00",
-      "fechaApertura": "2026-11-23T08:10:00",
+      "fechaPreguntas": "2026-11-10T18:00:00-03:00",
+      "fechaApertura": "2026-11-23T08:10:00-03:00",
       "montoEstimado": 20000000,
       "moneda": "CLP",
       "items": [
@@ -405,7 +364,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=960841-2-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 4,
       "nueva": false
     },
     {
@@ -423,8 +381,8 @@
       "descripcion": "SE SOLICITA VESTUARIO Y CALZADO A ESTABLECIMIENTOS EDUCACIONALES CALAMA SEGUN LO INDICADO EN LAS BASES ADMINISTRATIVAS Y TECNICAS. COMPLETAR LOS DOCUMENTOS ADJUNTOS FIRMARLOS Y SUBIRLOS A LA PLATAFORMA",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-23T15:00:00",
-      "fechaPreguntas": "2026-11-16T11:00:00",
-      "fechaApertura": "2026-11-23T15:01:00",
+      "fechaPreguntas": "2026-11-16T11:00:00-03:00",
+      "fechaApertura": "2026-11-23T15:01:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -437,7 +395,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1233623-48-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -455,8 +412,8 @@
       "descripcion": "La Secretaría Técnica del Consejo de Monumentos Nacionales en el marco de la labor de ejecutar el Programa de Voluntariado Patrimonial del Servicio Nacional del Patrimonio Cultural, requiere de entregar a las personas voluntarias elementos distintivos para llevar a cabo tanto las labores de voluntariado como las salidas de capacitación, entre otras.\n\nPor lo anterior esta licitación busca adquirir poleras estampadas, gorros y botellas con la imagen institucional del Voluntariado Patrimonial.",
       "fechaPublicacion": "2026-11-12",
       "fechaCierre": "2026-11-23T15:00:00",
-      "fechaPreguntas": "2026-11-16T10:00:00",
-      "fechaApertura": "2026-11-24T08:00:00",
+      "fechaPreguntas": "2026-11-16T10:00:00-03:00",
+      "fechaApertura": "2026-11-24T08:00:00-03:00",
       "montoEstimado": 4400000,
       "moneda": "CLP",
       "items": [
@@ -469,7 +426,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4650-21-L126",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -487,8 +443,8 @@
       "descripcion": "SUMINISTRO DE PANTALONES MODELO HOMBRE Y MUJER PARA FUNCIONARIOS DE LA ILUSTRE MUNICIPALIDAD DE CONCEPCIÓN AÑO 2026: La presente licitación tiene por objeto el suministro de vestuario consistente en pantalones, modelo hombre y modelo mujer, destinado al personal municipal planta y contrata de los estamentos auxiliares, administrativos, técnicos, jefaturas y profesionales hasta grado 9.",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-23T15:05:00",
-      "fechaPreguntas": "2026-11-13T17:00:00",
-      "fechaApertura": "2026-11-23T16:00:00",
+      "fechaPreguntas": "2026-11-13T17:00:00-03:00",
+      "fechaApertura": "2026-11-23T16:00:00-03:00",
       "montoEstimado": 30000000,
       "moneda": "CLP",
       "items": [
@@ -507,7 +463,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2672-4-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -525,8 +480,8 @@
       "descripcion": "La Ilustre Municipalidad de Punta Arenas, a través de la Dirección de Desarrollo Comunitario, requiere contratar un servicio de diseño y confección de vestuario, para los Elencos de carácter ciudadano de la municipalidad, vestuarios que serán parte de la indumentaria escénica en las distintas presentaciones de estos elencos a la comunidad.",
       "fechaPublicacion": "2026-11-12",
       "fechaCierre": "2026-11-23T15:10:00",
-      "fechaPreguntas": "2026-11-17T12:00:00",
-      "fechaApertura": "2026-11-23T15:10:00",
+      "fechaPreguntas": "2026-11-17T12:00:00-03:00",
+      "fechaApertura": "2026-11-23T15:10:00-03:00",
       "montoEstimado": 13750000,
       "moneda": "CLP",
       "items": [
@@ -551,7 +506,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2354-43-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -569,8 +523,8 @@
       "descripcion": "Se requiere adquirir por la Municipalidad de Peñalolén vestimenta y accesorios tácticos para funcionarios de la Dirección de Seguridad Humana, según especificaciones técnicas.",
       "fechaPublicacion": "2026-11-09",
       "fechaCierre": "2026-11-23T15:30:00",
-      "fechaPreguntas": "2026-11-13T15:30:00",
-      "fechaApertura": "2026-11-23T15:31:00",
+      "fechaPreguntas": "2026-11-13T15:30:00-03:00",
+      "fechaApertura": "2026-11-23T15:31:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -583,7 +537,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-80-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -601,8 +554,8 @@
       "descripcion": "SUMINISTRO DE CALZADOPARA FUNCIONARIOS AS DE LA ILUSTRE MUNICIPALIDAD DE CONCEPCIÓN AÑO 2026\r\nLa presente licitación tiene por objeto el suministro de calzado de trabajo destinado al personal municipal planta y contrata de los estamentos auxiliares, administrativos, técnicos, jefaturas y profesionales hasta grado 9, que se desempeñan en la Ilustre Municipalidad de Concepción, con la finalidad de otorgar una adecuada identificación institucional durante el desarrollo de sus labores.",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-23T15:30:00",
-      "fechaPreguntas": "2026-11-16T12:00:00",
-      "fechaApertura": "2026-11-23T16:00:00",
+      "fechaPreguntas": "2026-11-16T12:00:00-03:00",
+      "fechaApertura": "2026-11-23T16:00:00-03:00",
       "montoEstimado": 40000000,
       "moneda": "CLP",
       "items": [
@@ -633,7 +586,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2672-5-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -651,8 +603,8 @@
       "descripcion": "ADQUISICIÓN DE POLERAS INSTITUCIONALES PARA FUNCIONARIOS Y FUNCIONARIAS  DE LA MUNICIPALIDAD DE PADRE LAS CASAS, SEGÚN BASES ADJUNTAS",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-23T16:30:00",
-      "fechaPreguntas": "2026-11-17T12:00:00",
-      "fechaApertura": "2026-11-23T16:30:00",
+      "fechaPreguntas": "2026-11-17T12:00:00-03:00",
+      "fechaApertura": "2026-11-23T16:30:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -683,7 +635,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2546-68-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 6,
       "nueva": false
     },
     {
@@ -701,8 +652,8 @@
       "descripcion": "ADQUISICION DE CALZADO PARA TALLERES ESCUELA ISLA DEL LAJA F-887, SEGUN ESPECIFICACIONES TECNICAS ANEXAS",
       "fechaPublicacion": "2026-11-17",
       "fechaCierre": "2026-11-24T10:00:00",
-      "fechaPreguntas": "2026-11-18T19:00:00",
-      "fechaApertura": "2026-11-24T10:05:00",
+      "fechaPreguntas": "2026-11-18T19:00:00-03:00",
+      "fechaApertura": "2026-11-24T10:05:00-03:00",
       "montoEstimado": 4000000,
       "moneda": "CLP",
       "items": [
@@ -715,7 +666,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2409-124-L126",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 7,
       "nueva": true
     },
     {
@@ -733,8 +683,8 @@
       "descripcion": "ADQUISICION DE VESTUARIO DEPORTIVO PARA TALLERES ESCUELA F-887 ISLA DEL LAJA, SEGUN ESPECIFICACIONES TECNICAS ANEXAS",
       "fechaPublicacion": "2026-11-17",
       "fechaCierre": "2026-11-24T10:00:00",
-      "fechaPreguntas": "2026-11-18T19:00:00",
-      "fechaApertura": "2026-11-24T10:05:00",
+      "fechaPreguntas": "2026-11-18T19:00:00-03:00",
+      "fechaApertura": "2026-11-24T10:05:00-03:00",
       "montoEstimado": 7000000,
       "moneda": "CLP",
       "items": [
@@ -747,7 +697,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2409-125-L126",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 7,
       "nueva": true
     },
     {
@@ -765,8 +714,8 @@
       "descripcion": "ADQUISICION DE CALZADO FORMAL PARA FUNCIONARIOS MUNICPALIDAD DE CUREPTO",
       "fechaPublicacion": "2026-11-13",
       "fechaCierre": "2026-11-24T12:00:00",
-      "fechaPreguntas": "2026-11-18T16:00:00",
-      "fechaApertura": "2026-11-24T12:00:00",
+      "fechaPreguntas": "2026-11-18T16:00:00-03:00",
+      "fechaApertura": "2026-11-24T12:00:00-03:00",
       "montoEstimado": 8500000,
       "moneda": "CLP",
       "items": [
@@ -779,7 +728,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4314-46-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 7,
       "nueva": false
     },
     {
@@ -797,8 +745,8 @@
       "descripcion": "El presente proceso tiene por objeto la adquisición de ropa de trabajo, calzado y elementos de protección personal para COMDES Salud Calama, conforme a las líneas de adjudicación que se indican.",
       "fechaPublicacion": "2026-11-03",
       "fechaCierre": "2026-11-24T15:00:00",
-      "fechaPreguntas": "2026-11-09T16:00:00",
-      "fechaApertura": "2026-11-24T15:01:00",
+      "fechaPreguntas": "2026-11-09T16:00:00-03:00",
+      "fechaApertura": "2026-11-24T15:01:00-03:00",
       "montoEstimado": 45000000,
       "moneda": "CLP",
       "items": [
@@ -823,7 +771,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1230848-75-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 7,
       "nueva": false
     },
     {
@@ -841,8 +788,8 @@
       "descripcion": "Se requiere licitar la adquisición de indumentaria deportiva programa campeones para Coquimbo, con el fin de Proveer indumentaria deportiva técnica e institucional a participantes y talleristas del Programa Campeones para Coquimbo, con el fin de estandarizar su presentación, fortalecer el sentido de pertenencia y mejorar la imagen del programa ante la comunidad.\r\nSe deja expresa constancia que los oferentes deberán ofertar la totalidad de productos requeridos. El incumplimiento de esta disposición facultará al municipio para declarar inadmisibles a dichas ofertas.\r\n\r\nLa Municipalidad de Coquim",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-24T15:00:00",
-      "fechaPreguntas": "2026-11-16T18:00:00",
-      "fechaApertura": "2026-11-24T15:01:00",
+      "fechaPreguntas": "2026-11-16T18:00:00-03:00",
+      "fechaApertura": "2026-11-24T15:01:00-03:00",
       "montoEstimado": 20000000,
       "moneda": "CLP",
       "items": [
@@ -1065,7 +1012,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2446-341-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 7,
       "nueva": false
     },
     {
@@ -1083,8 +1029,8 @@
       "descripcion": "La Facultad de Odontología de la Universidad de Talca requiere contratar el servicio de provisión y bordado de polerones para la Cohorte 2027, con el propósito de disponer de prendas personalizadas que representen a los estudiantes de la carrera, fortaleciendo su identidad y sentido de pertenencia con la institución.",
       "fechaPublicacion": "2026-11-13",
       "fechaCierre": "2026-11-25T10:00:00",
-      "fechaPreguntas": "2026-11-19T15:00:00",
-      "fechaApertura": "2026-11-25T10:01:00",
+      "fechaPreguntas": "2026-11-19T15:00:00-03:00",
+      "fechaApertura": "2026-11-25T10:01:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1097,7 +1043,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1469-369-L126",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 8,
       "nueva": false
     },
     {
@@ -1115,8 +1060,8 @@
       "descripcion": "La Asociación MSUR requiere adquirir y recibir vestuario institucional para la temporada de verano 2026–2027, destinado a su personal operativo, de acuerdo con las Bases Técnicas que forman parte integrante de la licitación.\r\nLa adquisición comprende 1.200 poleras, 1.200 pantalones tipo buzo deportivo y 600 gorros legionarios. Se incluye confección a medida de tallas especiales dentro de las cantidades indicadas y sin recargo respecto del precio unitario adjudicado.",
       "fechaPublicacion": "2026-11-06",
       "fechaCierre": "2026-11-25T15:00:00",
-      "fechaPreguntas": "2026-11-13T15:00:00",
-      "fechaApertura": "2026-11-25T15:01:00",
+      "fechaPreguntas": "2026-11-13T15:00:00-03:00",
+      "fechaApertura": "2026-11-25T15:01:00-03:00",
       "montoEstimado": 50000000,
       "moneda": "CLP",
       "items": [
@@ -1129,7 +1074,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1428670-18-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 8,
       "nueva": false
     },
     {
@@ -1147,8 +1091,8 @@
       "descripcion": "ADQUISICIÓN Y CONFECCIÓN DE UNIFORMES INSTITUCIONALES FEMENINOS PARA LA UNIVERSIDAD DEL BÍO-BÍO, SC 4436",
       "fechaPublicacion": "2026-11-05",
       "fechaCierre": "2026-11-25T19:59:00",
-      "fechaPreguntas": "2026-11-12T17:00:00",
-      "fechaApertura": "2026-11-26T09:00:00",
+      "fechaPreguntas": "2026-11-12T17:00:00-03:00",
+      "fechaApertura": "2026-11-26T09:00:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1161,7 +1105,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2705-68-LP26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 9,
       "nueva": false
     },
     {
@@ -1179,8 +1122,8 @@
       "descripcion": "La Ilustre Municipalidad de Punta Arenas, a través de la Dirección de Desarrollo Comunitario requiere adquirir polerones institucionales destinados a los integrantes de los Elencos Municipales de la Comuna de Punta Arenas.\r\n\r\nPara el cumplimiento de lo anterior, se requiere participantes que aseguren y certifiquen que los productos ofertados sean elaborados y estén de acuerdo con las normas técnicas existentes para cada uno de ellos, con los estándares de calidad y en la cantidad suficiente para abastecer los requerimientos del Municipio.\r\n",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-26T10:00:00",
-      "fechaPreguntas": "2026-11-19T16:00:00",
-      "fechaApertura": "2026-11-26T10:00:00",
+      "fechaPreguntas": "2026-11-19T16:00:00-03:00",
+      "fechaApertura": "2026-11-26T10:00:00-03:00",
       "montoEstimado": 7700000,
       "moneda": "CLP",
       "items": [
@@ -1193,7 +1136,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2354-44-LE26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 9,
       "nueva": true
     },
     {
@@ -1211,8 +1153,8 @@
       "descripcion": "La Ilustre Municipalidad de Angol invita a las empresas del rubro de vestuario y confección a participar en la licitación pública para la ejecución de la propuesta “ADQUISICIÓN UNIFORME PARA FUNCIONARIOS MUNICIPALES AÑO 2026”, de carácter total e indivisible, conforme a las exigencias de estas Bases Administrativas, Especificaciones Técnicas, Aclaraciones y la normativa vigente de Compras Públicas.",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-26T15:00:00",
-      "fechaPreguntas": "2026-11-20T15:00:00",
-      "fechaApertura": "2026-11-26T15:00:00",
+      "fechaPreguntas": "2026-11-20T15:00:00-03:00",
+      "fechaApertura": "2026-11-26T15:00:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1225,7 +1167,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2743-46-LE26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 9,
       "nueva": true
     },
     {
@@ -1243,8 +1184,8 @@
       "descripcion": "La Corporación de Asistencia Judicial con presencia en las regiones de Arica y  Parinacota, Tarapacá y Antofagasta, requiere adquirir  para sus funcionarios  que realizan salidas a terreno con motivo de la atención en Plazas ciudadanas o hacia zonas  rurales de difícil acceso.",
       "fechaPublicacion": "2026-11-17",
       "fechaCierre": "2026-11-26T15:00:00",
-      "fechaPreguntas": "2026-11-19T14:55:00",
-      "fechaApertura": "2026-11-26T15:01:00",
+      "fechaPreguntas": "2026-11-19T14:55:00-03:00",
+      "fechaApertura": "2026-11-26T15:01:00-03:00",
       "montoEstimado": 4000000,
       "moneda": "CLP",
       "items": [
@@ -1269,7 +1210,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=575924-15-L126",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 9,
       "nueva": true
     },
     {
@@ -1287,8 +1227,8 @@
       "descripcion": "ADQUISICIÓN DE UNIFORMES O VESTUARIO ESCOLAR PARA ALUMNOS DE ESTABLECIMIENTOS EDUCACIONALES DEPENDIENTES DEL SERVICIO LOCAL DE EDUCACION PUBLICA DE LLANQUIHUE",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-26T15:01:00",
-      "fechaPreguntas": "2026-11-20T20:00:00",
-      "fechaApertura": "2026-11-26T15:05:00",
+      "fechaPreguntas": "2026-11-20T20:00:00-03:00",
+      "fechaApertura": "2026-11-26T15:05:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1373,7 +1313,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1126922-46-LP26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 9,
       "nueva": true
     },
     {
@@ -1391,8 +1330,8 @@
       "descripcion": "El Departamento de Administración de Educación Municipal de Cañete DAEM llama a Licitación Pública a través del Portal Mercado Público, para la adquisición de “UNIFORMES PARA ESTUDIANTES DE LICEO JOSÉ DE LA CRUZ MIRANDA CORREA”, que tiene como finalidad favorecer la equidad, la permanencia escolar y el sentido de pertenencia al establecimiento. \r\nLas especificaciones de estos requerimientos se detallan en Bases Administrativas y Especificaciones Técnicas de la presente licitación",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-26T16:00:00",
-      "fechaPreguntas": "2026-11-23T12:00:00",
-      "fechaApertura": "2026-11-26T16:05:00",
+      "fechaPreguntas": "2026-11-23T12:00:00-03:00",
+      "fechaApertura": "2026-11-26T16:05:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1405,7 +1344,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4034-23-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 9,
       "nueva": false
     },
     {
@@ -1423,8 +1361,8 @@
       "descripcion": "El Servicio Local de Educación Pública de Los Andes – en adelante SLEP de Los Andes- llama a presentar ofertas para la ADQUISICIÓN DE VESTUARIO Y CALZADO PARA LA COMUNIDAD ESCOLAR DE LOS ESTABLECIMIENTOS EDUCACIONALES DE SU DEPENDENCIA.",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-27T15:00:00",
-      "fechaPreguntas": "2026-11-20T20:36:00",
-      "fechaApertura": "2026-11-27T15:01:00",
+      "fechaPreguntas": "2026-11-20T20:36:00-03:00",
+      "fechaApertura": "2026-11-27T15:01:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1545,7 +1483,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1375753-52-LE26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 10,
       "nueva": true
     },
     {
@@ -1563,8 +1500,8 @@
       "descripcion": "E1O2RT9 La SEREMI de Salud de la Región de O'Higgins requiere adquirir uniformes institucionales para a los/as funcionarios/as pertenecientes a la\r\nSEREMI de Salud Región de O´Higgins.",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-27T15:00:00",
-      "fechaPreguntas": "2026-11-22T23:00:00",
-      "fechaApertura": "2026-11-27T15:05:00",
+      "fechaPreguntas": "2026-11-22T23:00:00-03:00",
+      "fechaApertura": "2026-11-27T15:05:00-03:00",
       "montoEstimado": 10350000,
       "moneda": "CLP",
       "items": [
@@ -1577,7 +1514,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1656-35-LE26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 10,
       "nueva": true
     },
     {
@@ -1595,8 +1531,8 @@
       "descripcion": "ADQUISICIÓN DE CALZADO DE SEGURIDAD - BOTAS PARA AGUA - POLAINAS CUBRE CALZADO PROTECCIÓN PARA PIES, NUEVO LLAMADO",
       "fechaPublicacion": "2026-11-17",
       "fechaCierre": "2026-11-27T15:01:00",
-      "fechaPreguntas": "2026-11-20T11:00:00",
-      "fechaApertura": "2026-11-27T15:02:00",
+      "fechaPreguntas": "2026-11-20T11:00:00-03:00",
+      "fechaApertura": "2026-11-27T15:02:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1609,7 +1545,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2483-302-LE26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 10,
       "nueva": true
     },
     {
@@ -1627,8 +1562,8 @@
       "descripcion": "Las presentes Bases Administrativas tienen por objeto reglamentar el llamado a Licitación Pública para: “Adquisición de Ropa de Seguridad y Elementos de Protección Personal (EPP)“. ",
       "fechaPublicacion": "2026-11-16",
       "fechaCierre": "2026-11-27T15:29:00",
-      "fechaPreguntas": "2026-11-22T20:47:00",
-      "fechaApertura": "2026-11-27T15:30:00",
+      "fechaPreguntas": "2026-11-22T20:47:00-03:00",
+      "fechaApertura": "2026-11-27T15:30:00-03:00",
       "montoEstimado": 28700000,
       "moneda": "CLP",
       "items": [
@@ -1653,45 +1588,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2730-158-LE26",
       "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 10,
-      "nueva": true
-    },
-    {
-      "codigo": "14-36-CO26",
-      "nombre": "ADQUISICIÓN DE PARKAS 3 EN 1 MACROZONA SUR",
-      "linea": "corporativo",
-      "motivo": "Vestuario corporativo o institucional",
-      "organismo": "INSTITUTO NACIONAL DE ESTADISTICAS",
-      "unidad": "INSTITUTO NACIONAL DE ESTADISTICAS",
-      "sector": "Otro sector público",
-      "region": "Región Metropolitana de Santiago",
-      "comuna": "Santiago",
-      "tipo": "CO",
-      "tipoDescripcion": "Compra coordinada",
-      "descripcion": "El Instituto Nacional de Estadísticas INE, en el marco de la ejecución de la Encuesta de Presupuestos Familiares EPF, requiere adquirir parkas 3 en 1 destinadas al personal que desarrollará labores de levantamiento de información en terreno en las Direcciones Regionales que conforman la Macrozona Sur.",
-      "fechaPublicacion": "2026-11-16",
-      "fechaCierre": "2026-11-30T15:00:00",
-      "fechaPreguntas": "2026-11-19T18:00:00",
-      "fechaApertura": "2026-11-30T15:01:00",
-      "montoEstimado": 8250000,
-      "moneda": "CLP",
-      "items": [
-        {
-          "producto": "Ropa impermeable protectora o ropa para ambiente húmedo",
-          "descripcion": "Parka 3 en 1 (S, M, L, XL y XXL)",
-          "cantidad": 54,
-          "unidad": "Unidad"
-        },
-        {
-          "producto": "Ropa impermeable protectora o ropa para ambiente húmedo",
-          "descripcion": "Parka 3 en 1 (XXXL)",
-          "cantidad": 1,
-          "unidad": "Unidad"
-        }
-      ],
-      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=14-36-CO26",
-      "vistaPrimeraVez": "2026-11-17",
-      "diasParaCierre": 13,
       "nueva": true
     },
     {
@@ -1709,8 +1605,8 @@
       "descripcion": "La presente licitación pública tiene por objetivo la adquisición de uniformes institucionales destinados a las y los funcionarios de la Dirección de Salud, dependientes de la Corporación Municipal de Desarrollo Social de Pudahuel.",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-11-30T15:00:00",
-      "fechaPreguntas": "2026-11-14T18:30:00",
-      "fechaApertura": "2026-11-30T15:30:00",
+      "fechaPreguntas": "2026-11-14T18:30:00-03:00",
+      "fechaApertura": "2026-11-30T15:30:00-03:00",
       "montoEstimado": 93500000,
       "moneda": "CLP",
       "items": [
@@ -1729,8 +1625,44 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1214102-60-LP26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 13,
       "nueva": false
+    },
+    {
+      "codigo": "14-36-CO26",
+      "nombre": "ADQUISICIÓN DE PARKAS 3 EN 1 MACROZONA SUR",
+      "linea": "corporativo",
+      "motivo": "Vestuario corporativo o institucional",
+      "organismo": "INSTITUTO NACIONAL DE ESTADISTICAS",
+      "unidad": "INSTITUTO NACIONAL DE ESTADISTICAS",
+      "sector": "Otro sector público",
+      "region": "Región Metropolitana de Santiago",
+      "comuna": "Santiago",
+      "tipo": "CO",
+      "tipoDescripcion": "Compra coordinada",
+      "descripcion": "El Instituto Nacional de Estadísticas INE, en el marco de la ejecución de la Encuesta de Presupuestos Familiares EPF, requiere adquirir parkas 3 en 1 destinadas al personal que desarrollará labores de levantamiento de información en terreno en las Direcciones Regionales que conforman la Macrozona Sur.",
+      "fechaPublicacion": "2026-11-16",
+      "fechaCierre": "2026-11-30T15:00:00",
+      "fechaPreguntas": "2026-11-19T18:00:00-03:00",
+      "fechaApertura": "2026-11-30T15:01:00-03:00",
+      "montoEstimado": 8250000,
+      "moneda": "CLP",
+      "items": [
+        {
+          "producto": "Ropa impermeable protectora o ropa para ambiente húmedo",
+          "descripcion": "Parka 3 en 1 (S, M, L, XL y XXL)",
+          "cantidad": 54,
+          "unidad": "Unidad"
+        },
+        {
+          "producto": "Ropa impermeable protectora o ropa para ambiente húmedo",
+          "descripcion": "Parka 3 en 1 (XXXL)",
+          "cantidad": 1,
+          "unidad": "Unidad"
+        }
+      ],
+      "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=14-36-CO26",
+      "vistaPrimeraVez": "2026-11-17",
+      "nueva": true
     },
     {
       "codigo": "2408-217-LP26",
@@ -1747,8 +1679,8 @@
       "descripcion": "ADQUISICIÓN VESTUARIO PARA FUNCIONARIOS DE LA MUNICIPALIDAD DE LOS ÁNGELES TEMPORADA 2027.",
       "fechaPublicacion": "2026-11-10",
       "fechaCierre": "2026-12-03T09:00:00",
-      "fechaPreguntas": "2026-11-19T12:00:00",
-      "fechaApertura": "2026-12-03T09:00:00",
+      "fechaPreguntas": "2026-11-19T12:00:00-03:00",
+      "fechaApertura": "2026-12-03T09:00:00-03:00",
       "montoEstimado": 190085074,
       "moneda": "CLP",
       "items": [
@@ -1761,7 +1693,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2408-217-LP26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 16,
       "nueva": false
     },
     {
@@ -1779,8 +1710,8 @@
       "descripcion": "La Municipalidad de Providencia requiere contratar la “ADQUISICIÓN DE TARJETAS TIPO GIFTCARD DE PANTALONES Y CALZADO PARA FUNCIONARIOS Y FUNCIONARIAS DE LA MUNICIPALIDAD DE PROVIDENCIA AÑO 2026-2027”, para las temporadas primavera-verano y otoño-invierno correspondientes al período 2026 y 2027, para ser entregadas a las funcionarias y funcionarios de la Municipalidad de Providencia, como complemento de su uniforme institucional.\r\n\r\n",
       "fechaPublicacion": "2026-11-02",
       "fechaCierre": "2026-12-03T15:00:00",
-      "fechaPreguntas": "2026-11-10T10:00:00",
-      "fechaApertura": "2026-12-03T15:30:00",
+      "fechaPreguntas": "2026-11-10T10:00:00-03:00",
+      "fechaApertura": "2026-12-03T15:30:00-03:00",
       "montoEstimado": null,
       "moneda": "CLP",
       "items": [
@@ -1799,7 +1730,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2490-112-LR26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 16,
       "nueva": false
     },
     {
@@ -1817,8 +1747,8 @@
       "descripcion": "Contar con el servicio de confección de uniformes para funcionarias de la Subsecretaría de Educación, correspondientes a los años 2027 y 2028",
       "fechaPublicacion": "2026-11-06",
       "fechaCierre": "2026-12-14T20:00:00",
-      "fechaPreguntas": "2026-11-13T23:59:00",
-      "fechaApertura": "2026-12-15T10:00:00",
+      "fechaPreguntas": "2026-11-13T23:59:00-03:00",
+      "fechaApertura": "2026-12-15T10:00:00-03:00",
       "montoEstimado": 21060000,
       "moneda": "CLP",
       "items": [
@@ -1837,7 +1767,6 @@
       ],
       "enlace": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=592-37-LE26",
       "vistaPrimeraVez": "2026-11-16",
-      "diasParaCierre": 28,
       "nueva": false
     }
   ]

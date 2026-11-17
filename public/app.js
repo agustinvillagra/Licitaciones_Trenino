@@ -125,20 +125,46 @@ const escapar = (s) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]
   );
 
+// Los plazos son de Mercado Público, así que se muestran en hora de Chile
+// aunque alguien mire la página desde otra zona.
+const ZONA = 'America/Santiago';
+
 function fechaHora(iso) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '—';
   return (
-    d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short' }) +
+    d.toLocaleDateString('es-CL', { timeZone: ZONA, day: '2-digit', month: 'short' }) +
     ', ' +
-    d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' })
+    d.toLocaleTimeString('es-CL', {
+      timeZone: ZONA, hour: '2-digit', minute: '2-digit', hour12: false,
+    })
   );
 }
 
-function plazo(dias) {
-  if (dias === null || dias === undefined) return { texto: '—', clase: '' };
-  if (dias < 0) return { texto: 'cerrada', clase: '' };
-  if (dias === 0) return { texto: 'cierra hoy', clase: 'urge' };
+/**
+ * Cuánto falta para el cierre.
+ *
+ * Se calcula al pintar la tarjeta y no al generar el JSON, por dos razones:
+ * un número guardado envejece hasta la corrida siguiente, y redondear a días
+ * mostraba "queda 1 día" a algo que cerraba en quince minutos. Bajo las 24
+ * horas se muestran horas, y bajo la hora, minutos.
+ */
+function plazo(fechaCierre) {
+  if (!fechaCierre) return { texto: '—', clase: '' };
+  const d = new Date(fechaCierre);
+  if (Number.isNaN(d.getTime())) return { texto: '—', clase: '' };
+
+  const ms = d - new Date();
+  if (ms <= 0) return { texto: 'cerrada', clase: '' };
+
+  const min = Math.floor(ms / 60_000);
+  if (min < 60) return { texto: `cierra en ${min} min`, clase: 'urge' };
+
+  const horas = Math.floor(min / 60);
+  if (horas < 24) return { texto: `cierra en ${horas} h`, clase: 'urge' };
+
+  // Math.floor y no ceil: "queda 1 día" significa que queda al menos un día.
+  const dias = Math.floor(horas / 24);
   if (dias === 1) return { texto: 'queda 1 día', clase: 'urge' };
   if (dias <= 2) return { texto: `quedan ${dias} días`, clase: 'urge' };
   if (dias <= 7) return { texto: `quedan ${dias} días`, clase: 'semana' };
@@ -231,7 +257,7 @@ function chipPreguntas(l) {
   const d = new Date(l.fechaPreguntas);
   if (Number.isNaN(d.getTime())) return '';
   const cerrado = d < new Date();
-  const txt = d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short' });
+  const txt = d.toLocaleDateString('es-CL', { timeZone: ZONA, day: '2-digit', month: 'short' });
   return cerrado
     ? `<span class="chip apagado" title="Ya no se pueden hacer preguntas al comprador">Preguntas cerradas</span>`
     : `<span class="chip">Preguntas hasta el ${txt}</span>`;
@@ -257,7 +283,7 @@ function tarjeta(l) {
   const reg = estado.marcas[l.codigo];
   const m = reg?.marca;
   const cerrada = estado.vista === 'cerradas';
-  const p = plazo(l.diasParaCierre);
+  const p = plazo(l.fechaCierre);
   const abierta = estado.abiertas.has(l.codigo);
   const clases = ['item', m ?? '', cerrada ? 'cerrada' : ''].filter(Boolean).join(' ');
 
@@ -402,8 +428,10 @@ function pintarTodo() {
 function pintarSello() {
   const d = new Date(estado.datos.actualizado);
   $('#sello').textContent =
-    `Actualizado el ${d.toLocaleDateString('es-CL', { day: '2-digit', month: 'long' })} ` +
-    `a las ${d.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' })}`;
+    `Actualizado el ${d.toLocaleDateString('es-CL', { timeZone: ZONA, day: '2-digit', month: 'long' })} ` +
+    `a las ${d.toLocaleTimeString('es-CL', {
+      timeZone: ZONA, hour: '2-digit', minute: '2-digit', hour12: false,
+    })}`;
 }
 
 function pintarIdentidad() {
